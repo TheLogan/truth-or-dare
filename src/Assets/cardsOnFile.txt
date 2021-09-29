@@ -1,0 +1,1049 @@
+[
+  {
+    "Category": "Truth",
+    "Level": 0,
+    "Cards": [
+      {
+        "IsBottle": false,
+        "Description": "You look thirsty, drink *2@4* times",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "What was your funniest first date?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "What is your weirdest habit?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "What was your childhood nickname?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Describe your worst date ever?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "If there was no such thing as money, what would you do with your life?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "If you were stuck on a desert island, what 3 objects would you take with you?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Describe your worst kiss ever?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Have you ever blacked out from drinking too much? What happened?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "What's the craziest thing you've ever done while drunk?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "What is the earliest you have ever started drinking in the day?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Do you have a crush on someone in this room? (You don't have to say who ;) )",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "What is the silliest thing you have an emotional attachment to?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "What is you favorite food?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "What is the biggest life lesson you've learned?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Tell us an embarresing fact about yourself",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "What is your favorite movie?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "What is the favorite part of your body?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      }
+    ]
+  },
+  {
+    "Category": "Truth",
+    "Level": 1,
+    "Cards": [
+      {
+        "IsBottle": false,
+        "Description": "You look thirsty, drink *2@4* times",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Can you lick your nose with your tongue?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Tell us one little thing that can really attract you to a person",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Give a sincere compliment to: *spinBottle*",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "If you could change one thing on your body, what would it be?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Have you ever woken up to a stranger in your bed?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "What was your best sexual experience?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "How old were you when you watched your first porn?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "How old were you when you had your first kiss?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "How old were you the first time you got drunk?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "What is the longest time you've gone without sex?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Do you prefer to be on top or bottom?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "What is the worst sexual experience you've ever had?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Where is the strangest place you've ever had sex?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Does size matter?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Swallow or spit?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Have you ever faked an orgasm?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Who looks the sexiest in here?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "How many boyfriends/Girlfriends do you have?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "What is the most embarrassing thing your parents have caught you doing?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "What was your first impression of this person?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      }
+    ]
+  },
+  {
+    "Category": "Truth",
+    "Level": 2,
+    "Cards": [
+      {
+        "IsBottle": false,
+        "Description": "You look thirsty, drink *2@4* times",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Do you have a crush on someone in this room? Who?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Describe how it feels when you orgasm?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "How do you feel about group sex?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Do you enjoy rough or slow sex?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "What is your strangest sexual fantasy?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Have you ever done a 3-some?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Would you ever join a 3-some?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Have you ever taken it in the butt or would you?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "How much porn do you watch?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Do you ever just walk around naked?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Tell us about your latest sexploits",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      }
+    ]
+  },
+  {
+    "Category": "Truth",
+    "Level": 3,
+    "Cards": [
+      {
+        "IsBottle": false,
+        "Description": "What was your best sexual experience? ",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "What is the longest you've ever gone down on someone?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Have/would you ever do a 3-some?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Would you ever watch your partner have sex with someone else?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Where is your favourite place to be kissed?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "What is the longest you've gone without sex?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Do you enjoy rough or slow sex?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Where's the strangest place you've had sex?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Have/would you ever pay for sex?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Have you made a sex tape?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Who is your favourite porn star?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "What's your favourite type of porn?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Lights on or off?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "What is your biggest roleplaying fantasy?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "What is the best thing a partner can do to you?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "What is your strangest sexual fantasy",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "How many orgasms have you had in a single sexual encounter?",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      }
+    ]
+  },
+  {
+    "Category": "Dare",
+    "Level": 0,
+    "Cards": [
+      {
+        "IsBottle": false,
+        "Description": "You look thirsty, drink *2@4* times",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Try to touch your elbows behind your back, if you can't you must drink.",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Give a flying kiss to a person of the opposite gender",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Give the person on your *direction* an eskimokiss",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Drink a chili shot!",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "This person has had a rough day, give him/her a backrub",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Get on all fours and act like a dog until your next turn",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Till your next turn you can only communicate with signlanguage and interpretive dance.",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Sing your favorite disney song",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Set your cellphone language to chinese",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Let autosuggest write a text message and send it to a random person.",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Let this person draw a small drawing on your face.",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Welcome to the PEN 15 club for special people, someone must write the clubname on your face!",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Tell a non-PC joke.",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Hug someone you don't know well.",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Place a shot on the person to your *direction*'s body, then drink it without using your hands.",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Spend the next round sitting on this persons lap",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "You must kiss this person on the cheek",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      }
+    ]
+  },
+  {
+    "Category": "Dare",
+    "Level": 1,
+    "Cards": [
+      {
+        "IsBottle": false,
+        "Description": "You look thirsty, drink *2@4* times",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Spank the person to your *direction* on the ass.",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "You look cold, put on *12pieces* of clothing",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "You look warm, remove on *12pieces* of clothing",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "This person will mix you a drink, you must drink nothing else till it's empty",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "The nearest person of the opposite gender to your *direction*, must give you a hickie",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Choose someone who must kiss you anywhere they want",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Drink-off!! Other players make *4@10* shots. You two drink as fast as you can, loser must down half their drink.",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Challenge this person to a drink-off, you both chug a beer, whoever loses removes *12pieces* of clothing.",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Give a lapdance to",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Dryhump:",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Choose someone to challenge to a deepthroat competition (on a bottle or similar)",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Lick the person to your *direction*'s face",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Remove *1@3* pieces of clothing",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Do an impression of a fake orgasm",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Take a selfie with the toilet and post it online",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "You and the closest person of the opposite sex must swap 1 item of clothing, the other players decide what.",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Belly dance to the music",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      }
+    ]
+  },
+  {
+    "Category": "Dare",
+    "Level": 2,
+    "Cards": [
+      {
+        "IsBottle": false,
+        "Description": "You look thirsty, drink *2@4* times",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Motorboat the nearest woman!",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Do a sexy dance",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Lick the closest person of the opposite genders neck",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Lick your fingers in a sexy way",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Kiss the closest person of opposite sex to where the bottle points",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "You and the closest person of the opposite sex must swap 3 items of clothing, or drink *4@8* horrible shots mixed by the other players.",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Caress this players breast.",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "The other players all add some of their drinks to a glass, you can drink nothing else until it's empty.",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "You look warm, remove *12pieces* of clothing",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      }
+    ]
+  },
+  {
+    "Category": "Dare",
+    "Level": 3,
+    "Cards": [
+      {
+        "IsBottle": false,
+        "Description": "Do a strip dance, or remove *12pieces* of clothing",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Lick the closest person of the opposite gender from their neck all the way to the brim of their underwear",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Make out with this person of the opposite gender, otherwise remove 2 pieces of clothing",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Tease this player with an icecube until it melts ",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Pour whipped cream (or other foodstuff) on you, the other players must lick it off or drink thrice",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Spin the bottle, the closest person of the opposite gender must join you in the next room/closet for 7 minutes in heaven",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Take off the nearest persons bra using only your teeth",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "The other players donate clothes to you, you must redress so you're only wearing the donated clothes",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "You are this persons sex slave for the next 2 turns, you must do everything they say, every time you don't, they may spank you",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "The player on your *direction* must spank you",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Give a lapdance to this player",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Lick this womans breast",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Cares this person of the opposite genders crotch",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Take an icecube in your mouth, pass it using only your mouth to another player, they must then pass it to a third player etc. until the icecube has melted",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      }
+    ]
+  },
+  {
+    "Category": "Special",
+    "Level": 0,
+    "Cards": [
+      {
+        "IsBottle": false,
+        "Description": "You look thirsty, drink *2@4* times",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Play a round of 'Never have I ever'",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "For the next two turns you must end every sentence with *wordEnding*, if you forget you must drink",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "From now on all other players must refer to you as *title*, if they forget they must *drinkStrip*",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "The *youngOld* player must drink",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "All beardless players drink",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Waterfall!\nEveryone starts drinking, players must drink till the player on their left stops, starting with you",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Until your next turn you must copy whatever this player does, drink whenever you forget",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Everyone must look as serious as possible, the first player to laugh downs their drink",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "All players must touch you. The last player to do so must drink",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "The most sober player downs their drink",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "The player wearing the *leastMost* clothes must drink",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Clearly you are a very lucky person, you've just won 3 extra turns",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "You drew a dud, sit back and enjoy the nothingness as you hand this device to the next player",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Whomever the bottle points at must ask you a kitchen related question, if you fail to answer, you must drink",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "You must speak in a seductive voice for the rest of the game, every time you forget, you must drink",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "The last player to shout 'PENIS' drinks",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Do an impression, the rest must try to guess of who",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Players, starting with you, must name a *brandName* within the category of *category*, first to fail drinks",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "The person with the *age* cellphone drinks",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "This player must sing the start of a song and you must continue it. If you succeed he must drink, otherwise you drink",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "The players sitting on either side of you must kiss each other",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Play Rock Paper scissors with this player, the loser removes *12pieces* of clothing",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Until your next turn you must imitate everything this player does. Every time you forget, you must drink",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "All players must stand up, the last player to do so must drink",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Next time someone empties their glass they must shout \"It's showtime!\", all other players must drink, the last person to do so must empty their glass",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Stand on one leg till your next turn",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Try to seduce this player",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "The other players must agree on a challenge for you, you must do this or empty your drink",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "The other players must agree on an animal, until your next turn you must act as this animal, if you forget, you must drink",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "Fuck google, ask this guy instead!\nUntil your next turn players can ask you anything, everytime you can't answer, you must drink",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "For every drink you finish (from full) until your next turn, this player must remove 1 piece of clothing.",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": false,
+        "Description": "From now and till your next turn, whenever someone drinks, you must swap seats with them",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Swap seats with this person",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      },
+      {
+        "IsBottle": true,
+        "Description": "Place a shot on this persons belly and drink it without using hands",
+        "IsLoganSafe": false,
+        "CardCount": 1
+      }
+    ]
+  },
+  {
+    "Category": "Special",
+    "Level": 1,
+    "Cards": []
+  },
+  {
+    "Category": "Special",
+    "Level": 2,
+    "Cards": []
+  },
+  {
+    "Category": "Special",
+    "Level": 3,
+    "Cards": []
+  }
+]
