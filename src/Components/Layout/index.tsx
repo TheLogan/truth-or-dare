@@ -3,9 +3,9 @@ import React from 'react';
 import './style.scss';
 
 const Layout: React.FC = (props) => {
-  return <Grid container className="background" justifyContent="center" alignContent="center" xs={12}>
+  return <Grid container className="background" justifyContent="center" alignContent="center">
     <Grid item xs={8}>
-        {props.children}
+      {props.children}
     </Grid>
   </Grid>
 }

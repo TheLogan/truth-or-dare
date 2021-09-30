@@ -5,7 +5,9 @@ import './style.scss'
 const GameCard: React.FC<iCard> = (props) => {
 
   function renderBottle (){
-    return <img src="../../Assets/wine-bottle.png" alt="bottle" />
+    if(props.isBottle)
+      return <img src="../../Assets/wine-bottle.png" alt="bottle" />
+      return <></>
   }
 
   return <div className={"gameCard " + props.category}>

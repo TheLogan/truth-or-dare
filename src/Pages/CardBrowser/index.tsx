@@ -18,13 +18,13 @@ const CardBrowser: React.FC = (props) => {
     lastCat = cardCat.category
 
     return (
-      <Grid item padding={2} spacing={2}>
+      <Grid item key={cardCat.category + cardCat.level}>
         <div className="categoryContainer">
           {title}
           <Grid container rowSpacing={1} columnSpacing={1} style={{ padding: '10px' }} justifyContent="center" >
             {cardCat.cards.map(card => {
               return (
-                <Grid item>
+                <Grid item key={card.description}>
                   <GameCard {...card} category={cardCat.category} level={cardCat.level} />
                 </Grid>
               )
@@ -36,7 +36,7 @@ const CardBrowser: React.FC = (props) => {
   });
 
   return (
-    <Grid container direction="column" spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+    <Grid container direction="column" >
       {cardCats}
     </Grid>
   )
