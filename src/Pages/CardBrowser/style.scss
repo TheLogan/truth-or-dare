@@ -1,10 +1,17 @@
 .categoryContainer {
-  border: 1px solid grey;
-  background-image: url("../../Assets/TilingBg.jpg");
+  border: 2px solid #516156;
+  background-image: url("../../Assets/DarkTiling.jpg");
   background-size: 5%;
   padding: 20px;
   margin: 20px;
   padding-bottom: 60px;
   border-radius: 10px;
   box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.5);
+}
+
+.titlebar {
+  background-color: rgba(128, 128, 128, 0.5);
+  border-radius: 5px;
+  border-bottom: 5px solid rgba(0,0,0,0.25);
+  padding: 10px;
 }

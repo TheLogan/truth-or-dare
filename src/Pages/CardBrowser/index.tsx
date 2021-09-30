@@ -10,9 +10,9 @@ const CardBrowser: React.FC = (props) => {
   const cardCats = cardData.map(cardCat => {
     let title = <></>
     if (lastCat !== cardCat.category) {
-      title = <><Typography variant="h2">{capitalizeFirstLetter(cardCat.category)}</Typography>Level: {cardCat.level}</>
+      title = <><Typography variant="h2" >{capitalizeFirstLetter(cardCat.category)}</Typography><Typography variant="h5">Level: {cardCat.level}</Typography></>
     } else {
-      title = <>Level: {cardCat.level}</>
+      title = <Typography variant="h5">Level: {cardCat.level}</Typography>
     }
 
     lastCat = cardCat.category
@@ -20,7 +20,9 @@ const CardBrowser: React.FC = (props) => {
     return (
       <Grid item key={cardCat.category + cardCat.level}>
         <div className="categoryContainer">
-          {title}
+          <div className="titlebar">
+            {title}
+          </div>
           <Grid container rowSpacing={1} columnSpacing={1} style={{ padding: '10px' }} justifyContent="center" >
             {cardCat.cards.map(card => {
               return (
