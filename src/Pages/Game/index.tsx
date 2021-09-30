@@ -1,6 +1,6 @@
 import React from 'react'
 const Game = () => {
-  return <></>;
+  return <>This is game</>;
 }
 
 export default Game;
