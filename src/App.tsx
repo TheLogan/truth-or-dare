@@ -23,11 +23,22 @@ function App() {
               <GameMenu />
             </Layout>
           </Route>
+          <Route path="/game/settings">
+            <Layout>
+              {/* <Game /> */}
+            </Layout>
+          </Route>
           <Route path="/game/play">
             <Layout>
               <Game />
             </Layout>
           </Route>
+          <Route path="/game/credits">
+            <Layout>
+              {/* <Game /> */}
+            </Layout>
+          </Route>
+          
 
           <Route path="/">
             <Layout>

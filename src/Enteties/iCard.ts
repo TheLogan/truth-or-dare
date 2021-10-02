@@ -1,7 +1,7 @@
 export default interface iCard {
   isBottle: boolean;
   description: string;
-  isLoganSafe: boolean;
+  verified: boolean;
   cardCount: number;
   category: 'truth' | 'dare' | 'special'
   level: 0 | 1 | 2 | 3;
@@ -10,6 +10,6 @@ export default interface iCard {
 export interface iCardSerialized {
   isBottle: boolean;
   description: string;
-  isLoganSafe: boolean;
+  verified: boolean;
   cardCount: number;
 }
