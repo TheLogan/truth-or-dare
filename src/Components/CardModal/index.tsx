@@ -54,7 +54,7 @@ const CardModal: React.FC<iCardModal> = (props) => {
         <TextField
           className={"content " + category}
           multiline
-          maxRows={12}
+          maxRows={9}
           value={description}
           onChange={e => setDescription(e.target.value)}
           variant="standard"
