@@ -9,18 +9,18 @@
   padding: 5px;
 
   &.truth {
-    background-image: url("./cardBgBlue.jpg");
+    background-image: url("../../Assets/cardBgBlue.jpg");
     border: 8px solid #7cb3ff;
     outline: 1px solid #67a6ff;
   }
 
   &.dare {
-    background-image: url("./cardBgPink.jpg");
+    background-image: url("../../Assets/cardBgPink.jpg");
     border: 8px solid #f96caa;
   }
 
   &.special {
-    background-image: url("./cardBgGold.jpg");
+    background-image: url("../../Assets/cardBgGold.jpg");
     border: 8px solid #ffc63e;
   }
 

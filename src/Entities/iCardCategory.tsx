@@ -1,7 +1,7 @@
-import { iCardSerialized } from "./iCard";
+import eCard from "./eCard";
 
 export interface iCardCategory {
-  cards: iCardSerialized[];
+  cards: eCard[];
   category: 'truth' | 'dare' | 'special';
   level: 0 | 1 | 2 | 3,
 }

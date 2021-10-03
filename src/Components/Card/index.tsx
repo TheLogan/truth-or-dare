@@ -1,18 +1,18 @@
 import React from "react";
-import iCard from "../../Enteties/iCard";
+import {iCard} from './interfaces'
 import './style.scss'
 
 const GameCard: React.FC<iCard> = (props) => {
 
-  function renderBottle (){
-    if(props.isBottle)
-      return <img src="../../Assets/wine-bottle.png" alt="bottle" />
-      return <></>
+  function renderBottle() {
+    if (props.card.isBottle)
+      return <img src="url('../../Assets/wine-bottle.png')" alt="bottle" />
+    return <></>
   }
 
-  return <div className={"gameCard " + props.category}>
-    <div className={"content " + props.category} >
-      <p>{props.description}</p>
+  return <div className={"gameCard " + props.card.category} onClick={() => props.onClick(props.card)}>
+    <div className={"content " + props.card.category} >
+      <p>{props.card.description}</p>
     </div>
     {renderBottle()}
   </div>
