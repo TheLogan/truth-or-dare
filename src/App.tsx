@@ -9,7 +9,7 @@ import GameMenu from './Pages/GameMenu';
 
 function App() {
   return (
-    <Router>
+    <Router basename={'/game'}>
       <div>
         <Switch>
           <Route path="/admin/browse">
