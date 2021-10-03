@@ -18,7 +18,13 @@ const CardModal: React.FC<iCardModal> = (props) => {
     const val = e.target.value;
     if (val === 'truth' || val === 'dare' || val === 'special') setCategory(val);
   }
-  function handleAmount(e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) { }
+  function handleAmount(e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) { 
+    const val = Number(e.target.value);
+    if(e.target.value === '') return setAmountInGame(0);
+    if(isNaN(val)) return;
+    if(val <1 || val > 7) return;
+    setAmountInGame(val);
+  }
 
   function renderLevelAndCat() {
     return (
@@ -59,7 +65,7 @@ const CardModal: React.FC<iCardModal> = (props) => {
           labelPlacement="end"
         />
       </div>
-      <TextField value={amountInGame} label="Amount in game" style={{ margin: '16px 0px' }} />
+      <TextField value={amountInGame} label="Amount in game" style={{ margin: '16px 0px' }} onChange={handleAmount} />
       <Grid container direction="row" justifyContent="space-between">
         <Button variant="contained">Cancel</Button>
         <Button variant="contained">Save</Button>
