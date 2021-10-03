@@ -12,35 +12,35 @@ function App() {
     <Router basename={'/game'}>
       <div>
         <Switch>
-          <Route path={`${process.env.PUBLIC_URL}/admin/browse`}>
+          <Route path="/admin/browse">
             <Layout>
               <CardBrowser />
             </Layout>
           </Route>
 
-          <Route path={`${process.env.PUBLIC_URL}/game`}>
+          <Route path="/game">
             <Layout>
               <GameMenu />
             </Layout>
           </Route>
-          <Route path={`${process.env.PUBLIC_URL}/game/settings`}>
+          <Route path="/game/settings">
             <Layout>
               {/* <Game /> */}
             </Layout>
           </Route>
-          <Route path={`${process.env.PUBLIC_URL}/game/play`}>
+          <Route path="/game/play">
             <Layout>
               <Game />
             </Layout>
           </Route>
-          <Route path={`${process.env.PUBLIC_URL}/game/credits`}>
+          <Route path="/game/credits">
             <Layout>
               {/* <Game /> */}
             </Layout>
           </Route>
           
 
-          <Route path={`${process.env.PUBLIC_URL}/`}>
+          <Route path="/">
             <Layout>
               <MainMenu />
             </Layout>
