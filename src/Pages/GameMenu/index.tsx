@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
 
+// import cards
 const GameMenu = () => {
   return <>
     <Grid container>
