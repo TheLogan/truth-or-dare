@@ -28,15 +28,21 @@ export const setEndLevel = (context: Context, val: number) => {
 }
 
 export const setTimeBetweenLevels = (context: Context, val: number | string) => {
-  if(val === '') {
+  if (val === '') {
     context.state.timeBetweenLevels = '';
     return;
   }
   let numVal = Number(val);
   if (isNaN(numVal)) return;
-  if(numVal > 15) numVal = 15;
-  if(numVal < 3) numVal = 3;
+  if (numVal > 15) numVal = 15;
+  if (numVal < 3) numVal = 3;
   context.state.timeBetweenLevels = numVal;
+}
+
+export const nextCard = (context: Context, val: "truth" | "dare") => {
+  const cardIndex = context.state.cardDeck.findIndex(x => x.category === 'special' || x.category === val);
+
+  context.state.currentCard = context.state.cardDeck.splice(cardIndex, 1)[0];
 }
 
 

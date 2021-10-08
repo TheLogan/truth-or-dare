@@ -8,6 +8,7 @@ type State = {
   startTime: number,
   startLevel: number | null;
   endLevel: number | null;
+  currentCard: null | eCard;
 }
 
 export const state: State = {
@@ -18,4 +19,5 @@ export const state: State = {
   startTime: 0,
   startLevel: null,
   endLevel: null,
+  currentCard: null
 }

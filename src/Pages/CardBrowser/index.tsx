@@ -6,6 +6,7 @@ import Well from '../../Components/Well';
 import eCard from '../../Entities/eCard';
 import { iCardCategory } from '../../Entities/iCardCategory';
 import './style.scss'
+import { capitalizeFirstLetter } from '../../utils/utils';
 
 const CardBrowser: React.FC = (props) => {
   const cardData: iCardCategory[] = require('../../Assets/cardsOnFile.json')
@@ -57,6 +58,3 @@ const CardBrowser: React.FC = (props) => {
 
 export default CardBrowser;
 
-function capitalizeFirstLetter(str: string) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}
