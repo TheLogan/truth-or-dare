@@ -6,6 +6,7 @@ import Game from './Pages/Game';
 import MainMenu from './Pages/MainMenu';
 import 'typeface-roboto'
 import GameMenu from './Pages/GameMenu';
+import GameSetup from './Pages/GameSetup';
 
 function App() {
   return (
@@ -18,14 +19,9 @@ function App() {
             </Layout>
           </Route>
 
-          <Route path="/game">
+          <Route path="/game/setup">
             <Layout>
-              <GameMenu />
-            </Layout>
-          </Route>
-          <Route path="/game/settings">
-            <Layout>
-              {/* <Game /> */}
+              <GameSetup />
             </Layout>
           </Route>
           <Route path="/game/play">
@@ -38,7 +34,11 @@ function App() {
               {/* <Game /> */}
             </Layout>
           </Route>
-          
+          <Route path="/game">
+            <Layout>
+              <GameMenu />
+            </Layout>
+          </Route>
 
           <Route path="/">
             <Layout>

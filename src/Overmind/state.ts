@@ -1,17 +1,21 @@
 import eCard from "../Entities/eCard"
 
 type State = {
-  cards: eCard[]
-  // foo: string
-  // bar: boolean
-  // baz: string
-  // user: User
+  loadedCards: eCard[];
+  cardDeck: eCard[];
+  discardPile: eCard[];
+  timeBetweenLevels: number,
+  startTime: number,
+  startLevel: number | null;
+  endLevel: number | null;
 }
 
 export const state: State = {
-  cards: []
-  // foo: 'bar',
-  // bar: true,
-  // baz: [],
-  // user: new User()
+  loadedCards: [],
+  cardDeck: [],
+  discardPile: [],
+  timeBetweenLevels: 0,
+  startTime: 0,
+  startLevel: null,
+  endLevel: null,
 }

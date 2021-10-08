@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+@font-face {
+  font-family: 'BALLW';
+  src: local('BALLW'), url(./Assets/Fonts/BALLW.TTF) format('truetype');
+}
+
+@font-face {
+  font-family: 'BlendaScript';
+  src: local('BlendaScript'), url(./Assets/Fonts/BlendaScript.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'engebrechtreRg';
+  src: local('engebrechtreRg'), url(./Assets/Fonts/engebrechtreRg.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'LOKICOLA';
+  src: local('LOKICOLA'), url(./Assets/Fonts/LOKICOLA.TTF) format('truetype');
+}

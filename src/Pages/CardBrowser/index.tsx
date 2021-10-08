@@ -2,6 +2,7 @@ import { Grid, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import GameCard from '../../Components/Card';
 import CardModal from '../../Components/CardModal';
+import Well from '../../Components/Well';
 import eCard from '../../Entities/eCard';
 import { iCardCategory } from '../../Entities/iCardCategory';
 import './style.scss'
@@ -22,7 +23,7 @@ const CardBrowser: React.FC = (props) => {
 
     return (
       <Grid item key={cardCat.category + cardCat.level}>
-        <div className="categoryContainer">
+        <Well variant="dark">
           <div className="titlebar">
             {title}
           </div>
@@ -37,7 +38,7 @@ const CardBrowser: React.FC = (props) => {
               )
             })}
           </Grid>
-        </div>
+          </Well>
       </Grid>
     )
   });

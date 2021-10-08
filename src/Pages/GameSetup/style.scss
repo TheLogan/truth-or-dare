@@ -1,0 +1,21 @@
+#setup-title {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 72px;
+  font-family: LOKICOLA;
+  background-image: linear-gradient(rgb(255, 241, 112), rgb(255, 217, 0), rgb(255, 174, 0));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-filter: drop-shadow(5px 5px rgb(0, 0, 0));
+  filter: drop-shadow(5px 5px rgb(0, 0, 0));
+  padding-left: 20px;
+}
+
+.setup-container {
+
+  .level-wrapper {
+    .selecter {
+      width: 50%;
+    }
+  }
+}
