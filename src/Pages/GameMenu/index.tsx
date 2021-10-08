@@ -1,14 +1,10 @@
 import { Button, Grid } from "@mui/material";
-import React from "react";
-import { useActions, useAppState } from "../../Overmind";
 import { useHistory } from "react-router-dom";
 
 // import cards
 const GameMenu = () => {
-  const actions = useActions();
   const history = useHistory();
 
-  React.useEffect(() => {actions.getCards();},[]);
 
 
   return <>

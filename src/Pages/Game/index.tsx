@@ -9,6 +9,10 @@ const Game = () => {
   const { currentCard } = useAppState();
   const actions = useActions();
 
+  const cardExit = () => {
+    actions.discardSelected();
+  }
+
   function renderBtn(category: "truth" | "dare") {
     return (
       <Button
@@ -23,8 +27,9 @@ const Game = () => {
   }
 
   function renderBody() {
+    console.log(`currentCard`, currentCard);
     if (currentCard) {
-      return <GameCard card={currentCard} />;
+      return <GameCard card={currentCard} draggable cardExit={cardExit} />;
     }
 
     return (

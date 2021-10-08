@@ -55,7 +55,6 @@ const GameSetup = () => {
       timeErr,
     });
 
-    //TODO: Fix me
     if (!stLvlErr && !endLvlErr && !timeErr) history.push("/game/play");
   }
 

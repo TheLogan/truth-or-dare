@@ -1,5 +1,6 @@
 import { Context } from '.'
 import eCard from '../Entities/eCard';
+import { shuffleCards } from '../utils/utils';
 
 export const getCards = async (context: Context) => {
   const cards = (await context.effects.api.getCards()).data;
@@ -8,15 +9,8 @@ export const getCards = async (context: Context) => {
 }
 
 export const shuffleDeck = (context: Context, cards: eCard[]) => {
-  const cardArr: eCard[] = [];
-  cards.forEach(card => { for (let i = 0; i < card.cardCount; i++) { cardArr.push(card); } });
-
-  const shuffledDeck: eCard[] = [];
-  while (cardArr.length > 0) {
-    const index = Math.floor(Math.random() * cardArr.length);
-    shuffledDeck.push(...cardArr.splice(index, 1));
-  }
-  context.state.cardDeck = shuffledDeck;
+  
+  context.state.cardDeck = shuffleCards(cards);
 }
 
 export const setStartLevel = (context: Context, val: number) => {
@@ -40,9 +34,52 @@ export const setTimeBetweenLevels = (context: Context, val: number | string) => 
 }
 
 export const nextCard = (context: Context, val: "truth" | "dare") => {
-  const cardIndex = context.state.cardDeck.findIndex(x => x.category === 'special' || x.category === val);
 
-  context.state.currentCard = context.state.cardDeck.splice(cardIndex, 1)[0];
+  let selected: null | eCard = null;
+  let deck = context.state.cardDeck.map(x => {return {...x}})
+  // let deck = [...context.state.cardDeck];
+  // let discard = [...context.state.discardPile]
+  let discard = context.state.discardPile.map(x => {return {...x}});
+
+  console.log('Card amount before: ',deck.length  + discard.length);
+
+  while(selected === null) {
+    if(deck.length < 1) {
+      deck = shuffleCards(discard);
+      discard = [];
+    }
+    
+    const current = deck.splice(0,1)[0];
+    
+    if((current.category === 'special' || current.category === val)) {
+      selected = current;
+    } else {
+      discard.push(current);
+    }
+  }
+
+  console.log('Card amount: ',deck.length  + discard.length);
+
+  context.state.cardDeck = deck;
+  context.state.currentCard = selected;
+  context.state.discardPile = discard;
+
+
+
+  // if(context.state.cardDeck.length < 1) {
+  //   // Do the shuffle;
+  // }
+
+  // const cardIndex = context.state.cardDeck.findIndex(x => x.category === 'special' || x.category === val);
+  // context.state.currentCard = context.state.cardDeck.splice(cardIndex, 1)[0];
+}
+
+export const discardSelected = (context: Context) => {
+  if(!context.state.currentCard) return;
+  const discard = context.state.discardPile.map(x => {return {...x}});
+  discard.push(context.state.currentCard);
+  context.state.discardPile = discard;
+  context.state.currentCard = null;
 }
 
 

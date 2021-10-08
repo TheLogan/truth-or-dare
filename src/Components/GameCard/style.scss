@@ -9,18 +9,18 @@
   padding: 5px;
 
   &.truth {
-    background-image: url("../../Assets/cardBgBlue.jpg");
+    background-image: url("../../Assets/img/cardBgBlue.jpg");
     border: 8px solid #7cb3ff;
     outline: 1px solid #67a6ff;
   }
 
   &.dare {
-    background-image: url("../../Assets/cardBgPink.jpg");
+    background-image: url("../../Assets/img/cardBgPink.jpg");
     border: 8px solid #f96caa;
   }
 
   &.special {
-    background-image: url("../../Assets/cardBgGold.jpg");
+    background-image: url("../../Assets/img/cardBgGold.jpg");
     border: 8px solid #ffc63e;
   }
 
@@ -29,7 +29,12 @@
     width: 75%;
     margin: 20px auto;
     padding: 10px;
-    
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
     p {
       font-family: Roboto;
     }
@@ -50,6 +55,19 @@
       box-shadow: inset 6px 6px 15px #a4853a;
       border: 1px solid #ffc63e;
       background: #ffc63e;
+    }
+  }
+
+  #bottleWrapper {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+
+    #bottle {
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      width: 150px;
     }
   }
 }

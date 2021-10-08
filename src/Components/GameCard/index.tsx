@@ -1,37 +1,65 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { iCard } from './interfaces'
+import bottle from '../../Assets/img/wine-bottle.png';
 import './style.scss'
+import BottleRotation from "../../FX/BottleRotation";
+import Draggable from "../../FX/Draggable";
+import { formatCardText, getRotation, randomRange } from "../../utils/utils";
+
 
 const GameCard: React.FC<iCard> = (props) => {
+  const [descriptiveText, setDescriptiveText] = useState('');
+  const [bottleState, setBottleState] = useState<'unclicked' | 'clicked' | 'done'>('unclicked');
+
+  const [rotation] = useState(getRotation());
+  const [timing] = useState(randomRange(2, 3) * 1000);
+
+  useEffect(() => {
+    console.log('do formatting');
+    
+    setDescriptiveText(formatCardText(props.card.description));
+  }, [])
 
   function renderBottle() {
     if (props.card.isBottle)
-      return <img src="url('../../Assets/wine-bottle.png')" alt="bottle" />
+      return (
+        <div id="bottleWrapper">
+          <BottleRotation
+            rotate={bottleState !== 'unclicked'}
+            rotation={rotation}
+            timing={timing}
+            onDone={() => setBottleState('done')}
+          >
+            <img id="bottle" src={bottle} alt="bottle" draggable={false}
+              onClick={() => setBottleState('clicked')}
+            />
+          </BottleRotation>
+        </div>
+      )
     return <></>
   }
 
-  return <div className={"gameCard " + props.card.category} onClick={() => props.onClick && props.onClick(props.card)}>
-    <div className={"content " + props.card.category} >
-      <p>{props.card.description}</p>
-    </div>
-    {renderBottle()}
-  </div>
+  const cardExit = () => props.cardExit && props.cardExit();
+
+  function renderBody() {
+    const card = (
+      <div className={"gameCard " + props.card.category} onClick={() => props.onClick && props.onClick(props.card)}>
+        <div className={"content " + props.card.category} >
+          <p>{descriptiveText}</p>
+        </div>
+        {renderBottle()}
+      </div>
+    )
+
+    if (props.draggable) {
+      if (props.card.isBottle === false || bottleState === 'done')
+        return <Draggable cardExit={cardExit}>{card}</Draggable>
+    }
+    return card;
+  }
 
 
+  return renderBody();
 }
 
 export default GameCard;
-
-const rangeReg = /\[\d{1,2}..\d{1,2}\]/g;
-const spinBottle = "*spinBottle*";
-const direction = "*direction*";
-const pieces = "*12pieces*" // for manipulating an amount of pieces of clothing
-const wordEndings = "*wordEnding*" // "For the next two turns you must end every sentence with *wordEnding*, if you forget you must drink"
-const title = "*title*" // "From now on all other players must refer to you as *title*, if they forget they must *drinkStrip*"
-const age = "*youngOld*" // The *youngOld* player must drink" youngest/oldest
-// "The person with the *age* cellphone drinks"
-const leastMost = "*leastMost*" // "The player wearing the *leastMost* clothes must drink"
-const category = "*category*"; // "Players, starting with you, must name a *brandName* within the category of *category*, first to fail drinks"
-
-/* IDEAS */
-    // Countdown function

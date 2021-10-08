@@ -7,8 +7,12 @@ import MainMenu from './Pages/MainMenu';
 import 'typeface-roboto'
 import GameMenu from './Pages/GameMenu';
 import GameSetup from './Pages/GameSetup';
+import { useActions } from './Overmind';
 
 function App() {
+  const actions = useActions();
+  React.useEffect(() => {actions.getCards();},[]);
+
   return (
     //TODO: updated variable in digital ocean
     <Router basename={process.env.baseName ?? ''}> 
