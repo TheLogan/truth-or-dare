@@ -4,7 +4,7 @@ type State = {
   loadedCards: eCard[];
   cardDeck: eCard[];
   discardPile: eCard[];
-  timeBetweenLevels: number,
+  timeBetweenLevels: number | '',
   startTime: number,
   startLevel: number | null;
   endLevel: number | null;
@@ -14,7 +14,7 @@ export const state: State = {
   loadedCards: [],
   cardDeck: [],
   discardPile: [],
-  timeBetweenLevels: 0,
+  timeBetweenLevels: '',
   startTime: 0,
   startLevel: null,
   endLevel: null,

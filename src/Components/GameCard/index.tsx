@@ -10,7 +10,7 @@ const GameCard: React.FC<iCard> = (props) => {
     return <></>
   }
 
-  return <div className={"gameCard " + props.card.category} onClick={() => props.onClick(props.card)}>
+  return <div className={"gameCard " + props.card.category} onClick={() => props.onClick && props.onClick(props.card)}>
     <div className={"content " + props.card.category} >
       <p>{props.card.description}</p>
     </div>

@@ -27,11 +27,16 @@ export const setEndLevel = (context: Context, val: number) => {
   if (!isNaN(val)) context.state.endLevel = val;
 }
 
-export const setTimeBetweenLevels = (context: Context, val: number) => {
-  if (isNaN(val)) return;
-  if(val > 15) val = 15;
-  if(val < 3) val = 3;
-  context.state.timeBetweenLevels = val;
+export const setTimeBetweenLevels = (context: Context, val: number | string) => {
+  if(val === '') {
+    context.state.timeBetweenLevels = '';
+    return;
+  }
+  let numVal = Number(val);
+  if (isNaN(numVal)) return;
+  if(numVal > 15) numVal = 15;
+  if(numVal < 3) numVal = 3;
+  context.state.timeBetweenLevels = numVal;
 }
 
 

@@ -10,7 +10,8 @@ import GameSetup from './Pages/GameSetup';
 
 function App() {
   return (
-    <Router basename={'/game'}>
+    //TODO: updated variable in digital ocean
+    <Router basename={process.env.baseName ?? ''}> 
       <div>
         <Switch>
           <Route path="/admin/browse">

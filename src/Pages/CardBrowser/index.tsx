@@ -1,6 +1,6 @@
 import { Grid, Typography } from '@mui/material';
 import React, { useState } from 'react';
-import GameCard from '../../Components/Card';
+import GameCard from '../../Components/GameCard';
 import CardModal from '../../Components/CardModal';
 import Well from '../../Components/Well';
 import eCard from '../../Entities/eCard';

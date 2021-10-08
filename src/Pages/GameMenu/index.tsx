@@ -5,7 +5,6 @@ import { useHistory } from "react-router-dom";
 
 // import cards
 const GameMenu = () => {
-  const { cardDeck } = useAppState();
   const actions = useActions();
   const history = useHistory();
 
