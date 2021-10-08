@@ -13,9 +13,10 @@ function App() {
   const actions = useActions();
   React.useEffect(() => {actions.getCards();},[]);
 
+
   return (
     //TODO: updated variable in digital ocean
-    <Router basename={process.env.baseName ?? ''}> 
+    <Router basename={window.location.hostname.includes('localhost') ? '' : '/game'}>
       <div>
         <Switch>
           <Route path="/admin/browse">
