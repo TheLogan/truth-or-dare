@@ -26,8 +26,6 @@ const Boop: React.FC<iBoop> = (props) => {
   }, [isBooped, props.timing])
 
   const trigger = () => {
-    console.log("boop!");
-
     setIsBooped(true);
   }
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Dragger, { DraggableData, DraggableEvent } from "react-draggable";
+import Dragger, { DraggableData } from "react-draggable";
 import { Vector2 } from "../utils/types";
 import { iDraggable } from "./interfaces";
 
@@ -15,8 +15,6 @@ const Draggable: React.FC<iDraggable> = (props) => {
   const onStart = () => setIsDragging(true);
   const onStop = () => {
     setIsDragging(false);
-    console.log(`dragPos`, dragPos);
-
     if (dragPos && (Math.abs(dragPos.x) > 120 || Math.abs(dragPos.y) > 280)) {
       setDragPos({ x: dragPos.x * 3, y: dragPos.y * 3 });
       props.cardExit();

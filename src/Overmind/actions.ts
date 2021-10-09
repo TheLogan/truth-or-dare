@@ -33,32 +33,35 @@ export const setTimeBetweenLevels = (context: Context, val: number | string) => 
   context.state.timeBetweenLevels = numVal;
 }
 
-export const nextCard = (context: Context, val: "truth" | "dare") => {
+export const setStartTime = (context: Context) => {
+  context.state.startTime = new Date().getTime();
+}
 
+export const nextCard = (context: Context, val: "truth" | "dare") => {
   let selected: null | eCard = null;
   let deck = context.state.cardDeck.map(x => {return {...x}})
-  // let deck = [...context.state.cardDeck];
-  // let discard = [...context.state.discardPile]
   let discard = context.state.discardPile.map(x => {return {...x}});
-
-  console.log('Card amount before: ',deck.length  + discard.length);
 
   while(selected === null) {
     if(deck.length < 1) {
       deck = shuffleCards(discard);
       discard = [];
     }
-    
     const current = deck.splice(0,1)[0];
     
-    if((current.category === 'special' || current.category === val)) {
+    const levelTime = Number(context.state.timeBetweenLevels) * 1000;
+    const timeDiff = new Date().getTime() - context.state.startTime;
+    const levels = levelTime / timeDiff;
+    const currentLevel = Math.floor(levels) + Number(context.state.startLevel);
+
+    
+    if((current.category === 'special' || current.category === val) && currentLevel <= Number(context.state.endLevel)) {
       selected = current;
     } else {
       discard.push(current);
     }
   }
 
-  console.log('Card amount: ',deck.length  + discard.length);
 
   context.state.cardDeck = deck;
   context.state.currentCard = selected;

@@ -10,8 +10,6 @@ import { config } from "./Overmind";
 
 const overmind = createOvermind(config);
 
-console.log("starting react");
-
 ReactDOM.render(
   <React.StrictMode>
     <Provider value={overmind}>

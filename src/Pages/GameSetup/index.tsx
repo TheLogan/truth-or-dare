@@ -55,7 +55,10 @@ const GameSetup = () => {
       timeErr,
     });
 
-    if (!stLvlErr && !endLvlErr && !timeErr) history.push("/game/play");
+    if (!stLvlErr && !endLvlErr && !timeErr) {
+      actions.setStartTime();
+      history.push("/game/play");
+    };
   }
 
   function renderLevel(

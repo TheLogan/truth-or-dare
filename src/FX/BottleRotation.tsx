@@ -1,10 +1,7 @@
-import { CSSProperties, useEffect, useState } from "react";
-import { randomRange } from "../utils/utils";
+import { CSSProperties, useEffect } from "react";
 import { iBottleRotation } from "./interfaces";
 
 const BottleRotation: React.FC<iBottleRotation> = (props) => {
-  // const [rotation] = useState(getRotation());
-  // const [timing] = useState(randomRange(2, 3) * 1000);
   
   useEffect(() => {
     if(props.rotate === true) {
@@ -12,6 +9,7 @@ const BottleRotation: React.FC<iBottleRotation> = (props) => {
         props.onDone();
       }, props.timing);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.rotate])
 
   

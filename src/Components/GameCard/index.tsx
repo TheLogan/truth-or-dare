@@ -15,9 +15,8 @@ const GameCard: React.FC<iCard> = (props) => {
   const [timing] = useState(randomRange(2, 3) * 1000);
 
   useEffect(() => {
-    console.log('do formatting');
-    
     setDescriptiveText(formatCardText(props.card.description));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   function renderBottle() {

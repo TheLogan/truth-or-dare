@@ -27,7 +27,6 @@ const Game = () => {
   }
 
   function renderBody() {
-    console.log(`currentCard`, currentCard);
     if (currentCard) {
       return <GameCard card={currentCard} draggable cardExit={cardExit} />;
     }

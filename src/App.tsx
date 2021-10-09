@@ -11,11 +11,11 @@ import { useActions } from './Overmind';
 
 function App() {
   const actions = useActions();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   React.useEffect(() => {actions.getCards();},[]);
 
 
   return (
-    //TODO: updated variable in digital ocean
     <Router basename={window.location.hostname.includes('localhost') ? '' : '/game'}>
       <div>
         <Switch>
