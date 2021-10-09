@@ -32,3 +32,8 @@ code {
   font-family: 'LOKICOLA';
   src: local('LOKICOLA'), url(./Assets/Fonts/LOKICOLA.TTF) format('truetype');
 }
+
+@font-face {
+  font-family: 'BallantinesSerial';
+  src: local('BallantinesSerial'), url(./Assets/Fonts/BallantinesSerial.woff2) format('woff2');
+}
