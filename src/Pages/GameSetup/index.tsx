@@ -114,7 +114,7 @@ const GameSetup = () => {
       <Well variant="dark">
         {/* <Well variant="light"> */}
         <div className="setup-container">
-          <Grid container direction="column" justifyContent="space-evenly"  style={{ height: '300px' }} >
+          <Grid container direction="column" justifyContent="space-between"  style={{ height: '230px' }} >
 
             <Grid item>
               <div className="level-wrapper">

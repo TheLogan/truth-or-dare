@@ -26,3 +26,11 @@ h3#or {
   filter: drop-shadow(5px 5px rgb(0, 0, 0));
   text-align: center;
 }
+
+#helperText {
+  position: fixed;
+  text-align: center;
+  width: 100vw;
+  top: 100px;
+  left: 0;
+}
