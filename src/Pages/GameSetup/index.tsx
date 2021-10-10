@@ -109,37 +109,49 @@ const GameSetup = () => {
   }
 
   return (
-    <Well variant="dark">
+    <>
       <h1 id="setup-title">Settings</h1>
-      <Well variant="light">
+      <Well variant="dark">
+        {/* <Well variant="light"> */}
         <div className="setup-container">
-          <div className="level-wrapper">
-            <h3>Salaciousness Level</h3>
-            <Grid
-              container
-              direction="row"
-              justifyContent="space-evenly"
-              alignContent="end"
-            >
-              {levelStart()}
-              {levelEnd()}
+          <Grid container direction="column" justifyContent="space-evenly"  style={{ height: '300px' }} >
+
+            <Grid item>
+              <div className="level-wrapper">
+                <h3>Salaciousness Level</h3>
+                <Grid
+                  container
+                  direction="row"
+                  justifyContent="space-evenly"
+                  alignContent="end"
+                >
+                  {levelStart()}
+                  {levelEnd()}
+                </Grid>
+              </div>
             </Grid>
-          </div>
-          <TextField
-            variant="filled"
-            label="Time between levels"
-            value={timeBetweenLevels}
-            onChange={(e) => actions.setTimeBetweenLevels(e.target.value)}
-            error={errors.timeErr}
-          />
+            <Grid item>
+              <TextField
+                variant="filled"
+                label="Time between levels"
+                value={timeBetweenLevels}
+                onChange={(e) => actions.setTimeBetweenLevels(e.target.value)}
+                error={errors.timeErr}
+                onBlur={() => {
+                  if (timeBetweenLevels === '') actions.setTimeBetweenLevels(3);
+                }}
+              />
+            </Grid>
+          </Grid>
         </div>
+        {/* </Well> */}
       </Well>
       <Grid container justifyContent="center">
         <Button variant="contained" onClick={startGame}>
           Start Game
         </Button>
       </Grid>
-    </Well>
+    </>
   );
 };
 
