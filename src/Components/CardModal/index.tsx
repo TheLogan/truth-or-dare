@@ -67,6 +67,7 @@ const CardModal: React.FC<iCardModal> = (props) => {
       </div>
       <TextField value={amountInGame} label="Amount in game" style={{ margin: '16px 0px' }} onChange={handleAmount} />
       <Grid container direction="row" justifyContent="space-between">
+        <Button variant="contained" onClick={() => alert('delete')}>Delete</Button>
         <Button variant="contained" onClick={props.onClose}>Cancel</Button>
         <Button variant="contained" onClick={() => {props.onClose(); alert("Not yet implemented")}}>Save</Button>
       </Grid>

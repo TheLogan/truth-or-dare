@@ -1,54 +1,75 @@
-import { Grid, Typography } from '@mui/material';
-import React, { useState } from 'react';
-import GameCard from '../../Components/GameCard';
+import React, { useEffect, useState } from 'react';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material'
+import { CheckBox, CheckBoxOutlineBlank } from '@mui/icons-material'
 import CardModal from '../../Components/CardModal';
-import Well from '../../Components/Well';
-import eCard from '../../Entities/eCard';
-import { iCardCategory } from '../../Entities/iCardCategory';
+import { eAdminCard } from '../../Entities/eCard';
+import { useActions, useAppState } from '../../Overmind';
 import './style.scss'
-import { capitalizeFirstLetter } from '../../utils/utils';
 
 const CardBrowser: React.FC = (props) => {
-  const cardData: iCardCategory[] = require('../../Assets/cardsOnFile.json')
-  const [selectedCard, setSelectedCard] = useState<null | eCard>(null);
-  let lastCat = '';
-  const cardCats = cardData.map(cardCat => {
-    let title = <></>
-    if (lastCat !== cardCat.category) {
-      title = <><Typography variant="h2" >{capitalizeFirstLetter(cardCat.category)}</Typography><Typography variant="h5">Level: {cardCat.level}</Typography></>
-    } else {
-      title = <Typography variant="h5">Level: {cardCat.level}</Typography>
-    }
+  const { adminCards } = useAppState();
+  const { loadAdminCards } = useActions();
+  const [selectedCard, setSelectedCard] = useState<null | eAdminCard>(null);
 
-    lastCat = cardCat.category
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => { loadAdminCards() }, [])
 
-    return (
-      <Grid item key={cardCat.category + cardCat.level}>
-        <Well variant="dark">
-          <div className="titlebar">
-            {title}
-          </div>
-          <Grid container rowSpacing={1} columnSpacing={1} style={{ padding: '10px' }} justifyContent="center" >
-            {cardCat.cards.map(card => {
-              card.category = cardCat.category;
-              card.level = cardCat.level;
-              return (
-                <Grid item key={card.description}>
-                  <GameCard onClick={(card) => setSelectedCard(card)} card={card} />
-                </Grid>
-              )
-            })}
-          </Grid>
-          </Well>
-      </Grid>
-    )
-  });
+  const truthCards: eAdminCard[] = adminCards.filter(card => card.category === "truth");
+  const dareCards: eAdminCard[] = adminCards.filter(card => card.category === 'dare');
+  const specialCards: eAdminCard[] = adminCards.filter(card => card.category === 'special');
+
+
+  const renderDataTable = (cards: eAdminCard[], variant: 'truth' | 'dare' | 'special') => {
+    return <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <TableHead>
+          <TableRow className={`tableHead ${variant}`}>
+            <TableCell>Id</TableCell>
+            <TableCell align="right">Description</TableCell>
+            <TableCell align="right">Level</TableCell>
+            <TableCell align="right">spin bottle</TableCell>
+            <TableCell align="right">verified</TableCell>
+            <TableCell align="right">amount in game</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {cards.map((card) => (
+            <TableRow
+              onClick={() => setSelectedCard(card)}
+              key={card.description}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              className={`tableRow ${variant}`}
+            >
+              <TableCell component="th" scope="row">{card.id}</TableCell>
+              <TableCell align="right">{card.description}</TableCell>
+              <TableCell align="right">{card.level}</TableCell>
+              <TableCell align="right">{card.isBottle ? <CheckBox /> : <CheckBoxOutlineBlank />}</TableCell>
+              <TableCell align="right">{card.verified}</TableCell>
+              <TableCell align="right">{card.cardCount}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  }
 
   return (
     <>
-      <Grid container direction="column" >
-        {cardCats}
-      </Grid>
+      <h1>Truth cards</h1>
+      {renderDataTable(truthCards, 'truth')}
+
+      <h1>Dare cards</h1>
+      {renderDataTable(dareCards, 'dare')}
+
+      <h1>Special cards</h1>
+      {renderDataTable(specialCards, 'special')}
+
+
+      {/* <Grid container direction="column" > */}
+      {/* {cardCats} */}
+      {/* </Grid> */}
+
+
       {selectedCard &&
         <CardModal selectedCard={selectedCard} onClose={() => setSelectedCard(null)} />
       }

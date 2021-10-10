@@ -86,6 +86,13 @@ export const discardSelected = (context: Context) => {
 }
 
 
+export const loadAdminCards = async (context: Context) => {
+  const cards = (await context.effects.api.getAdminCards()).data;
+  context.state.adminCards = cards;
+  context.actions.shuffleDeck(cards);
+
+}
+
 // export const noArgAction = (context: Context) => {
 //   // actions.noArgAction()
 // }

@@ -1,7 +1,8 @@
-import eCard from "../Entities/eCard"
+import eCard, { eAdminCard } from "../Entities/eCard"
 
 type State = {
   loadedCards: eCard[];
+  adminCards: eAdminCard[];
   cardDeck: eCard[];
   discardPile: eCard[];
   timeBetweenLevels: number | '',
@@ -13,6 +14,7 @@ type State = {
 
 export const state: State = {
   loadedCards: [],
+  adminCards: [],
   cardDeck: [],
   discardPile: [],
   timeBetweenLevels: '',
