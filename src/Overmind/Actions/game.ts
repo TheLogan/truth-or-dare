@@ -1,11 +1,11 @@
-import { Context } from '.'
-import eCard from '../Entities/eCard';
-import { shuffleCards } from '../utils/utils';
+import { Context } from '..'
+import eCard from '../../Entities/eCard';
+import { shuffleCards } from '../../utils/utils';
 
 export const getCards = async (context: Context) => {
   const cards = (await context.effects.api.getCards()).data;
   context.state.loadedCards = cards;
-  context.actions.shuffleDeck(cards);
+  context.actions.game.shuffleDeck(cards);
 }
 
 export const shuffleDeck = (context: Context, cards: eCard[]) => {
@@ -86,12 +86,6 @@ export const discardSelected = (context: Context) => {
 }
 
 
-export const loadAdminCards = async (context: Context) => {
-  const cards = (await context.effects.api.getAdminCards()).data;
-  context.state.adminCards = cards;
-  context.actions.shuffleDeck(cards);
-
-}
 
 // export const noArgAction = (context: Context) => {
 //   // actions.noArgAction()

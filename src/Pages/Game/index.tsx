@@ -1,5 +1,5 @@
 import { Button, Grid } from "@mui/material";
-import React, { RefObject } from "react";
+import React from "react";
 import GameCard from "../../Components/GameCard";
 import { cardState } from "../../Components/GameCard/interfaces";
 import { useActions, useAppState } from "../../Overmind";
@@ -8,12 +8,12 @@ import "./style.scss";
 
 const Game = () => {
   const { currentCard } = useAppState();
-  const actions = useActions();
+  const {discardSelected, nextCard} = useActions().game;
 
   const [cardState, setCardState] = React.useState<cardState>('unTouched');
 
   const cardExit = () => {
-    actions.discardSelected();
+    discardSelected();
   }
 
   function renderBtn(category: "truth" | "dare") {
@@ -22,7 +22,7 @@ const Game = () => {
         variant="contained"
         id={category}
         className="btn"
-        onClick={() => actions.nextCard(category)}
+        onClick={() => nextCard(category)}
         disabled={currentCard != null}
       >
         {capitalizeFirstLetter(category)}

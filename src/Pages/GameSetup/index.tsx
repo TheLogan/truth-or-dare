@@ -7,7 +7,7 @@ import "./style.scss";
 
 const GameSetup = () => {
   const { startLevel, endLevel, timeBetweenLevels } = useAppState();
-  const actions = useActions();
+  const {setStartLevel, setEndLevel, setStartTime, setTimeBetweenLevels} = useActions().game;
   const history = useHistory();
 
   const [errors, setErrors] = React.useState({
@@ -23,7 +23,7 @@ const GameSetup = () => {
       startLevel,
       errors.stLvlErr,
       activeValues,
-      actions.setStartLevel,
+      setStartLevel,
       () => setErrors({ ...errors, stLvlErr: false })
     );
   }
@@ -36,7 +36,7 @@ const GameSetup = () => {
       endLevel,
       errors.endLvlErr,
       activeValues,
-      actions.setEndLevel,
+      setEndLevel,
       () => setErrors({ ...errors, endLvlErr: false })
     );
   }
@@ -56,7 +56,7 @@ const GameSetup = () => {
     });
 
     if (!stLvlErr && !endLvlErr && !timeErr) {
-      actions.setStartTime();
+      setStartTime();
       history.push("/game/play");
     };
   }
@@ -135,10 +135,10 @@ const GameSetup = () => {
                 variant="filled"
                 label="Time between levels"
                 value={timeBetweenLevels}
-                onChange={(e) => actions.setTimeBetweenLevels(e.target.value)}
+                onChange={(e) => setTimeBetweenLevels(e.target.value)}
                 error={errors.timeErr}
                 onBlur={() => {
-                  if (timeBetweenLevels === '') actions.setTimeBetweenLevels(3);
+                  if (timeBetweenLevels === '') setTimeBetweenLevels(3);
                 }}
               />
             </Grid>

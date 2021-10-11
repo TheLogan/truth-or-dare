@@ -1,29 +1,33 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Layout from './Components/Layout';
-import CardBrowser from './Pages/CardBrowser';
+import CardBrowser from './Pages/Admin/CardBrowser';
 import Game from './Pages/Game';
 import MainMenu from './Pages/MainMenu';
 import 'typeface-roboto'
 import GameMenu from './Pages/GameMenu';
 import GameSetup from './Pages/GameSetup';
 import { useActions } from './Overmind';
+import Admin from './Pages/Admin';
 
 function App() {
   const actions = useActions();
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  React.useEffect(() => {actions.getCards();},[]);
+  React.useEffect(() => {actions.game.getCards();},[]);
 
 
   return (
     <Router basename={window.location.hostname.includes('localhost') ? '' : '/game'}>
       <div>
         <Switch>
-          <Route path="/admin/browse">
+          <Route path="/admin/">
+            <Admin />
+          </Route>
+          {/* <Route path="/admin/browse">
             <Layout>
               <CardBrowser />
             </Layout>
-          </Route>
+          </Route> */}
 
           <Route path="/game/setup">
             <Layout>

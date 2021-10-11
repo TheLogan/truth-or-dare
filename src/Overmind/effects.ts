@@ -11,7 +11,11 @@ export const api = {
 
   getAdminCards: () => {
     return axios.get(`${baseUrl}/admin/cards`);
-  }
+  },
+
+  adminLogin: (data:{username: string, password: string}) => {
+    return axios.post(`${baseUrl}/login`);
+  },
 
   // getUser: async (): Promise<User> => {
   //   const response = await fetch('/user')

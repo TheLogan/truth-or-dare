@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material'
 import { CheckBox, CheckBoxOutlineBlank } from '@mui/icons-material'
-import CardModal from '../../Components/CardModal';
-import { eAdminCard } from '../../Entities/eCard';
-import { useActions, useAppState } from '../../Overmind';
+import CardModal from '../../../Components/CardModal';
+import { eAdminCard } from '../../../Entities/eCard';
+import { useActions, useAppState } from '../../../Overmind';
 import './style.scss'
 
 const CardBrowser: React.FC = (props) => {
   const { adminCards } = useAppState();
-  const { loadAdminCards } = useActions();
+  const { loadAdminCards } = useActions().admin;
   const [selectedCard, setSelectedCard] = useState<null | eAdminCard>(null);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
