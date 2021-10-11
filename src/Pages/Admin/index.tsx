@@ -4,7 +4,7 @@ import AdminLogin from "./AdminLogin";
 import CardBrowser from "./CardBrowser";
 
 const Admin: React.FC = (props) => {
-  let { path, url } = useRouteMatch();
+  let { url } = useRouteMatch();
 
   return (
     <>

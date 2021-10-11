@@ -1,8 +1,8 @@
 import { Button, Grid, MenuItem, TextField } from "@mui/material";
 import React from "react";
 import { useHistory } from "react-router";
-import Well from "../../Components/Well";
-import { useActions, useAppState } from "../../Overmind";
+import Well from "../../../Components/Well";
+import { useActions, useAppState } from "../../../Overmind";
 import "./style.scss";
 
 const GameSetup = () => {
@@ -74,7 +74,7 @@ const GameSetup = () => {
         select
         error={err}
         variant="filled"
-        value={value}
+        value={value ?? ''}
         label={label}
         className="selecter"
         onChange={(e) => onChange(Number(e.target.value))}
