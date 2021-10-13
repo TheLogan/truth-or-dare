@@ -10,6 +10,7 @@ type State = {
   startLevel: number | null;
   endLevel: number | null;
   currentCard: null | eCard;
+  login: {token: string, error: string}
 }
 
 export const state: State = {
@@ -21,5 +22,6 @@ export const state: State = {
   startTime: 0,
   startLevel: null,
   endLevel: null,
-  currentCard: null
+  currentCard: null,
+  login: {token: '', error: ''}
 }

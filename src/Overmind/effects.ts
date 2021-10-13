@@ -1,6 +1,7 @@
 import axios from "axios"
 
 const baseUrl = 'https://api-ijnhh.ondigitalocean.app/api';
+const baseLocal = 'http://localhost:8080';
 
 export const api = {
 
@@ -13,8 +14,8 @@ export const api = {
     return axios.get(`${baseUrl}/admin/cards`);
   },
 
-  adminLogin: (data:{username: string, password: string}) => {
-    return axios.post(`${baseUrl}/login`);
+  adminLogin: (data:{username: string, password: string}): Promise<{data:string}> => {
+    return axios.post(`${baseLocal}/auth/login`, data);
   },
 
   // getUser: async (): Promise<User> => {
