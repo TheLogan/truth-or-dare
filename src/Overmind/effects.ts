@@ -1,4 +1,4 @@
-import axios from "axios"
+import axios, { AxiosRequestConfig } from "axios"
 
 const baseUrl = 'https://api-ijnhh.ondigitalocean.app/api';
 const baseLocal = 'http://localhost:8080';
@@ -11,7 +11,7 @@ export const api = {
   },
 
   getAdminCards: () => {
-    return axios.get(`${baseUrl}/admin/cards`);
+    return axios.get(`${baseLocal}/admin/cards`);   //, {headers: {"auth":"token"}});
   },
 
   adminLogin: (data:{username: string, password: string}): Promise<{data:string}> => {
