@@ -20,7 +20,7 @@ const Admin: React.FC = (props) => {
       )
     }
     return (
-      <Button onClick={() => history.push('/admin/login')}>Log in</Button>
+      <Button variant="contained" onClick={() => history.push('/admin/login')}>Log in</Button>
     )
   }
 

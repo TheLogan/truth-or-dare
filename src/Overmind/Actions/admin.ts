@@ -1,5 +1,6 @@
 import axios from "axios";
 import { Context } from "..";
+import eCard from "../../Entities/eCard";
 
 export const loadAdminCards = async (context: Context) => {
   const cards = (await context.effects.api.getAdminCards()).data;
@@ -17,5 +18,17 @@ export const loginAdmin = async (context: Context, data: {username:string, passw
   } catch (error) {
     console.log(`error`, error)
     context.state.login = {token: '', error: 'Could not log in'};
+  }
+}
+
+
+export const saveCardSuggestion = async(context: Context, card: eCard) => {
+  try {
+    const answer = (await context.effects.api.saveCardSuggestion(card)).data;
+    if(answer) {
+      // TODO: Celebrate
+    }
+  } catch (error) {
+    console.log(error);
   }
 }
