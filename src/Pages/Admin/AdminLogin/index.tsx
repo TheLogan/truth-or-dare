@@ -1,22 +1,34 @@
 import { Button, Grid, TextField } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useHistory } from "react-router";
 import Well from "../../../Components/Well";
-import { useActions } from "../../../Overmind";
+import { useActions, useAppState } from "../../../Overmind";
 
 const AdminLogin: React.FC = () => {
+  const { login } = useAppState()
   const { loginAdmin } = useActions().admin;
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const history = useHistory();
 
   const handleLogin = () => {
     if (!username) return;
     if (!password) return;
-    loginAdmin({username, password});
+    loginAdmin({ username, password });
   };
+
+  useEffect(() => {
+    if(login.token !== '') {
+      history.push('/admin');
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [login])
+
   return (
     <Well variant="light">
       <Grid container direction="column">
         <h3>Login</h3>
+        <i>{login.error}</i>
         <TextField
           label="Username"
           // style={{ backgroundColor: "white" }}
