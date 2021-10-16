@@ -8,7 +8,7 @@ const MainMenu = () => {
     <h1>Main Menu</h1>
 
     <Button onClick={() => history.push('/game')}>Play</Button>
-    <Button onClick={console.log}>Login</Button>
+    <Button onClick={() => history.push('/admin')}>Admin</Button>
   </>
 }
 

@@ -39,16 +39,16 @@ export const formatCardText = (description: string) => {
     }
   }
   
-  descr = descr.replace("*12pieces*", oneOrTwoPieces())
-  descr = descr.replace("*direction*", getDirection());
-  descr = descr.replace("*wordEnding*", wordEnding());
-  descr = descr.replace("*title*", getTitle());
-  descr = descr.replace("*youngOld*", getAge());
-  descr = descr.replace("*leastMost*", getLeastMost());
-  descr = descr.replace("*drinkOrStrip*", drinkOrStrip());
+  descr = descr.replaceAll("*12pieces*", oneOrTwoPieces())
+  descr = descr.replaceAll("*direction*", getDirection());
+  descr = descr.replaceAll("*wordEnding*", wordEnding());
+  descr = descr.replaceAll("*title*", getTitle());
+  descr = descr.replaceAll("*youngOld*", getAge());
+  descr = descr.replaceAll("*leastMost*", getLeastMost());
+  descr = descr.replaceAll("*drinkOrStrip*", drinkOrStrip());
   const [brandName, category] = brandCategory();
-  descr = descr.replace('*brandName*', brandName);
-  descr = descr.replace('*category*', category);
+  descr = descr.replaceAll('*brandName*', brandName);
+  descr = descr.replaceAll('*category*', category);
   return descr;
 }
 
