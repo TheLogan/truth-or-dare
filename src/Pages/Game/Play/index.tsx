@@ -8,13 +8,13 @@ import "./style.scss";
 
 const Play = () => {
   const { currentCard } = useAppState();
-  const {discardSelected, nextCard} = useActions().game;
+  const { discardSelected, nextCard } = useActions().game;
 
-  const [cardState, setCardState] = React.useState<cardState>('unTouched');
+  const [cardState, setCardState] = React.useState<cardState>("unTouched");
 
   const cardExit = () => {
     discardSelected();
-  }
+  };
 
   function renderBtn(category: "truth" | "dare") {
     return (
@@ -31,11 +31,11 @@ const Play = () => {
   }
 
   const gameState = () => {
-    if(currentCard === null ) return "Truth or Dare";
-    if(cardState === 'bottleNotSpun') return "Click bottle";
-    if(cardState === 'done') return "Swipe card"
+    if (currentCard === null) return "Truth or Dare";
+    if (cardState === "bottleNotSpun") return "Click bottle";
+    if (cardState === "done") return "Swipe card";
     return "do something";
-  }
+  };
 
   function renderBody() {
     return (
@@ -50,18 +50,33 @@ const Play = () => {
           <h3 id="or">Or</h3>
           {renderBtn("dare")}
         </Grid>
-        {/*
-        //@ts-ignore */}
-        {currentCard && <div style={{ position: "absolute", left: "calc(50vw - 118px)", top: "calc(50vh - 207px)" }} ><GameCard card={currentCard} draggable cardExit={cardExit} cardState={cardState} onCardStateChange={setCardState} /> </div>}
+        {currentCard && (
+          <div
+            style={{
+              position: "absolute",
+              left: "calc(50vw - 118px)",
+              top: "calc(50vh - 207px)",
+            }}
+          >
+            <GameCard
+              card={currentCard}
+              draggable
+              cardExit={cardExit}
+              cardState={cardState}
+              onCardStateChange={setCardState}
+            />
+          </div>
+        )}
       </>
     );
   }
 
-  return <>
-    <div id="helperText">{gameState()}</div>
-    {renderBody()}
-
-  </>;
+  return (
+    <>
+      <div id="helperText">{gameState()}</div>
+      {renderBody()}
+    </>
+  );
 };
 
 export default Play;
