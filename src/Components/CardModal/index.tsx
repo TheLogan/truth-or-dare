@@ -116,10 +116,17 @@ const CardModal: React.FC<iCardModal> = (props) => {
           <Button
             variant="contained"
             onClick={() => {
-              if (!amountInGame || !category || !description) return;
-              if(useBottle == null || level == null)return;
+              if (
+                !props.selectedCard ||
+                !amountInGame ||
+                !category ||
+                !description
+              )
+                return;
+              if (useBottle == null || level == null) return;
 
               const card: eCard = {
+                id: props.selectedCard.id,
                 cardCount: amountInGame,
                 category,
                 description,

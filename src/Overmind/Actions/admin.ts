@@ -4,8 +4,8 @@ import eCard from "../../Entities/eCard";
 
 export const loadAdminCards = async (context: Context) => {
   const cards = (await context.effects.api.getAdminCards()).data;
+  console.log(`cards`, cards)
   context.state.adminCards = cards;
-  context.actions.game.shuffleDeck(cards);
 }
 
 export const loginAdmin = async (context: Context, data: {username:string, password:string} ) => {
@@ -28,6 +28,14 @@ export const saveCardSuggestion = async(context: Context, card: eCard) => {
     if(answer) {
       // TODO: Celebrate
     }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const createUser = async(context: Context, user: {username: string, password: string}) => {
+  try {
+    return (await context.effects.api.createUser(user)).data;
   } catch (error) {
     console.log(error);
   }

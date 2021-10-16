@@ -8,7 +8,7 @@ export const api = {
 
 
   getCards:()=> {
-    return axios.get(`${baseUrl}/game/cards`);
+    return axios.get(`${baseLocal}/game/cards`);
   },
 
   getAdminCards: () => {
@@ -21,5 +21,8 @@ export const api = {
 
   saveCardSuggestion:(card: eCard) =>{
     return axios.post(`${baseLocal}/admin/suggestCardEdit`, card);
+  },
+  createUser: (user: {username: string, password: string}) => {
+    return axios.post(`${baseLocal}/user`, user);
   }
 }

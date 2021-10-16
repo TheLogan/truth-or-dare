@@ -1,4 +1,5 @@
 export default interface eCard {
+  id: number;
   isBottle: boolean;
   description: string;
   verified: boolean;

@@ -4,6 +4,7 @@ import Layout from "../../Components/Layout";
 import { useAppState } from "../../Overmind";
 import AdminLogin from "./AdminLogin";
 import CardBrowser from "./CardBrowser";
+import CreateUser from "./CreateUser";
 
 const Admin: React.FC = (props) => {
   const { url } = useRouteMatch();
@@ -16,6 +17,7 @@ const Admin: React.FC = (props) => {
         <div>
           <Button variant="contained" onClick={() => history.push('/admin/browse')}>Browse cards</Button>
           <Button variant="contained" >Review card edits</Button>
+          <Button variant="contained" onClick={() => history.push('/admin/createUser')} >Create User</Button>
         </div>
       )
     }
@@ -38,6 +40,9 @@ const Admin: React.FC = (props) => {
           </Route>
           <Route path={`${url}/browse`}>
             <CardBrowser />
+          </Route>
+          <Route path={`${url}/createUser`}>
+            <CreateUser />
           </Route>
         </Switch>
       </Layout>

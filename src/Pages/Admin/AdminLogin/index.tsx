@@ -31,13 +31,11 @@ const AdminLogin: React.FC = () => {
         <i>{login.error}</i>
         <TextField
           label="Username"
-          // style={{ backgroundColor: "white" }}
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
         <TextField
           label="Password"
-          // style={{ backgroundColor: "white" }}
           value={password}
           type="password"
           onChange={(e) => setPassword(e.target.value)}
