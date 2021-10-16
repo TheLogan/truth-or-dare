@@ -12,7 +12,7 @@
 .titlebar {
   background-color: rgba(128, 128, 128, 0.5);
   border-radius: 5px;
-  border-bottom: 5px solid rgba(0,0,0,0.25);
+  border-bottom: 5px solid rgba(0, 0, 0, 0.25);
   padding: 10px;
 }
 
@@ -37,5 +37,14 @@
   }
   &.special {
     border-bottom: gold 3px solid;
+  }
+}
+
+.formatBtnWrapper {
+  position: relative;
+  .formatBtn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
   }
 }

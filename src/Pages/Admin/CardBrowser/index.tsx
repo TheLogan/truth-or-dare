@@ -7,17 +7,20 @@ import {
   TableHead,
   TableRow,
   Paper,
+  Button,
 } from "@mui/material";
 import { CheckBox, CheckBoxOutlineBlank } from "@mui/icons-material";
 import CardModal from "../../../Components/CardModal";
 import eCard, { eAdminCard } from "../../../Entities/eCard";
 import { useActions, useAppState } from "../../../Overmind";
 import "./style.scss";
+import { formatCardText } from "../../../utils/utils";
 
 const CardBrowser: React.FC = (props) => {
   const { adminCards, login } = useAppState();
   const { loadAdminCards, saveCardSuggestion } = useActions().admin;
   const [selectedCard, setSelectedCard] = useState<null | eAdminCard>(null);
+  const [formatDescr, setFormatDescr] = useState(false);
 
   useEffect(() => {
     loadAdminCards();
@@ -69,7 +72,11 @@ const CardBrowser: React.FC = (props) => {
                 <TableCell component="th" scope="row">
                   {card.id}
                 </TableCell>
-                <TableCell align="right">{card.description}</TableCell>
+                <TableCell align="right">
+                  {formatDescr
+                    ? formatCardText(card.description)
+                    : card.description}
+                </TableCell>
                 <TableCell align="right">{card.level}</TableCell>
                 <TableCell align="right">
                   {card.isBottle ? <CheckBox /> : <CheckBoxOutlineBlank />}
@@ -88,6 +95,15 @@ const CardBrowser: React.FC = (props) => {
 
   return (
     <>
+      <div className="formatBtnWrapper">
+        <Button
+        className="formatBtn"
+          variant="contained"
+          onClick={() => setFormatDescr(!formatDescr)}
+        >
+          {formatDescr ? "Unformat descriptions" : "Format descriptions"}
+        </Button>
+      </div>
       <h1>Truth cards</h1>
       {renderDataTable(truthCards, "truth")}
 

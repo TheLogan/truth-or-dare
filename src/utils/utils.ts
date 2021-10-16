@@ -45,7 +45,7 @@ export const formatCardText = (description: string) => {
   descr = descr.replaceAll("*title*", getTitle());
   descr = descr.replaceAll("*youngOld*", getAge());
   descr = descr.replaceAll("*leastMost*", getLeastMost());
-  descr = descr.replaceAll("*drinkOrStrip*", drinkOrStrip());
+  descr = descr.replaceAll("*drinkStrip*", drinkOrStrip());
   const [brandName, category] = brandCategory();
   descr = descr.replaceAll('*brandName*', brandName);
   descr = descr.replaceAll('*category*', category);

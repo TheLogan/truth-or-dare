@@ -94,5 +94,5 @@ export const getLeastMost = () => {
 
 export const drinkOrStrip = () => {
   var rnd = randomRange(0, 10);
-  return rnd > 9 ? "remove 1 piece of clothing" : "drink 3 times";
+  return rnd > 8 ? "remove 1 piece of clothing" : "drink 3 times";
 }
