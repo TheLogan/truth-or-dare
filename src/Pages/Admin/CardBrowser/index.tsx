@@ -15,7 +15,7 @@ import { useActions, useAppState } from "../../../Overmind";
 import "./style.scss";
 
 const CardBrowser: React.FC = (props) => {
-  const { adminCards } = useAppState();
+  const { adminCards, login } = useAppState();
   const { loadAdminCards, saveCardSuggestion } = useActions().admin;
   const [selectedCard, setSelectedCard] = useState<null | eAdminCard>(null);
 
@@ -27,7 +27,7 @@ const CardBrowser: React.FC = (props) => {
   const handleSave = (changedCard: eCard) => {
     saveCardSuggestion(changedCard);
     setSelectedCard(null);
-  }
+  };
 
   const truthCards: eAdminCard[] = adminCards.filter(
     (card) => card.category === "truth"
@@ -52,7 +52,9 @@ const CardBrowser: React.FC = (props) => {
               <TableCell align="right">Description</TableCell>
               <TableCell align="right">Level</TableCell>
               <TableCell align="right">spin bottle</TableCell>
-              <TableCell align="right">verified</TableCell>
+              {login.role === "ADMIN" && (
+                <TableCell align="right">verified</TableCell>
+              )}
               <TableCell align="right">amount in game</TableCell>
             </TableRow>
           </TableHead>
@@ -72,7 +74,9 @@ const CardBrowser: React.FC = (props) => {
                 <TableCell align="right">
                   {card.isBottle ? <CheckBox /> : <CheckBoxOutlineBlank />}
                 </TableCell>
-                <TableCell align="right">{card.verified}</TableCell>
+                {login.role === "ADMIN" && (
+                  <TableCell align="right">{card.verified}</TableCell>
+                )}
                 <TableCell align="right">{card.cardCount}</TableCell>
               </TableRow>
             ))}

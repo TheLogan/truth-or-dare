@@ -10,14 +10,14 @@ export const loadAdminCards = async (context: Context) => {
 
 export const loginAdmin = async (context: Context, data: {username:string, password:string} ) => {
   try {
-    const token = (await context.effects.api.adminLogin(data)).data;
+    const {token, role} = (await context.effects.api.adminLogin(data)).data;
     if(!axios.defaults.headers) return;
     //@ts-ignore
     axios.defaults.headers.common.auth = token;
-    context.state.login = {token, error: ''};
+    context.state.login = {token, role};
   } catch (error) {
     console.log(`error`, error)
-    context.state.login = {token: '', error: 'Could not log in'};
+    context.state.login = {error: 'Could not log in'};
   }
 }
 

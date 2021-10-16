@@ -1,28 +1,33 @@
-import axios from "axios"
+import axios from "axios";
 import eCard from "../Entities/eCard";
 
-const baseUrl = 'https://api-ijnhh.ondigitalocean.app/api';
-const baseLocal = 'http://localhost:8080';
+const baseUrl = "https://api-ijnhh.ondigitalocean.app/api";
+const baseLocal = "http://localhost:8080";
+
+const apiUrl = () => {
+  return document.location.hostname.includes("localhost") ? baseLocal : baseUrl;
+};
 
 export const api = {
-
-
-  getCards:()=> {
-    return axios.get(`${baseLocal}/game/cards`);
+  getCards: () => {
+    return axios.get(`${apiUrl()}/game/cards`);
   },
 
   getAdminCards: () => {
-    return axios.get(`${baseLocal}/admin/cards`);   //, {headers: {"auth":"token"}});
+    return axios.get(`${apiUrl()}/admin/cards`); //, {headers: {"auth":"token"}});
   },
 
-  adminLogin: (data:{username: string, password: string}): Promise<{data:string}> => {
-    return axios.post(`${baseLocal}/auth/login`, data);
+  adminLogin: (data: {
+    username: string;
+    password: string;
+  }): Promise<{ data: { token: string; role: "ADMIN" | "USER" } }> => {
+    return axios.post(`${apiUrl()}/auth/login`, data);
   },
 
-  saveCardSuggestion:(card: eCard) =>{
-    return axios.post(`${baseLocal}/admin/suggestCardEdit`, card);
+  saveCardSuggestion: (card: eCard) => {
+    return axios.post(`${apiUrl()}/admin/suggestCardEdit`, card);
   },
-  createUser: (user: {username: string, password: string}) => {
-    return axios.post(`${baseLocal}/user`, user);
-  }
-}
+  createUser: (user: { username: string; password: string }) => {
+    return axios.post(`${apiUrl()}/user`, user);
+  },
+};

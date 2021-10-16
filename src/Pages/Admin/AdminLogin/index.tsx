@@ -18,7 +18,7 @@ const AdminLogin: React.FC = () => {
   };
 
   useEffect(() => {
-    if(login.token !== '') {
+    if(login.token !== '' && login.token != null) {
       history.push('/admin');
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps

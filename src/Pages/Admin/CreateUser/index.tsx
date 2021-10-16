@@ -1,7 +1,7 @@
 import { Button, Grid, TextField } from "@mui/material";
 import { useState } from "react";
 import Well from "../../../Components/Well";
-import { useActions, useAppState } from "../../../Overmind";
+import { useActions } from "../../../Overmind";
 
 const CreateUser: React.FC = () => {
   const { createUser } = useActions().admin;
