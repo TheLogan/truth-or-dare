@@ -34,7 +34,7 @@ const Play = () => {
     if (currentCard === null) return "Truth or Dare";
     if (cardState === "bottleNotSpun") return "Click bottle";
     if (cardState === "done") return "Swipe card";
-    return "do something";
+    return "...";
   };
 
   function renderBody() {
