@@ -5,6 +5,7 @@ import { useAppState } from "../../Overmind";
 import AdminLogin from "./AdminLogin";
 import CardBrowser from "./CardBrowser";
 import CreateUser from "./CreateUser";
+import "./style.scss"
 
 const Admin: React.FC = (props) => {
   const { url } = useRouteMatch();
@@ -47,7 +48,7 @@ const Admin: React.FC = (props) => {
       <Layout>
         <Switch>
           <Route exact path={url}>
-            <h3>Admin menu</h3>
+            <h3 id="adminMenuH3">Admin Menu</h3>
             {renderMenu()}
           </Route>
           <Route path={`${url}/login`}>
