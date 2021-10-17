@@ -11,6 +11,7 @@ type State = {
   endLevel: number | null;
   currentCard: null | eCard;
   login: {token?: string, role?: 'ADMIN' | 'USER', error?: string}
+  cardEdits: []
 }
 
 export const state: State = {
@@ -23,5 +24,6 @@ export const state: State = {
   startLevel: null,
   endLevel: null,
   currentCard: null,
-  login: {}
+  login: {},
+  cardEdits: []
 }

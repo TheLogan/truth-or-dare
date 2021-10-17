@@ -107,7 +107,7 @@ const CardModal: React.FC<iCardModal> = (props) => {
           onChange={handleAmount}
         />
         <Grid container direction="row" justifyContent="space-between">
-          <Button variant="contained" onClick={() => alert("delete")}>
+          <Button variant="contained" onClick={props.onDelete}>
             Delete
           </Button>
           <Button variant="contained" onClick={props.onClose}>

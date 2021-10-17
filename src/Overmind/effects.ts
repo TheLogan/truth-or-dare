@@ -14,7 +14,11 @@ export const api = {
   },
 
   getAdminCards: () => {
-    return axios.get(`${apiUrl()}/admin/cards`); //, {headers: {"auth":"token"}});
+    return axios.get(`${apiUrl()}/admin/cards`);
+  },
+
+  getAdminEdits: () => {
+    return axios.get(`${apiUrl()}/admin/cardEdits`)
   },
 
   adminLogin: (data: {
@@ -26,6 +30,10 @@ export const api = {
 
   saveCardSuggestion: (card: eCard) => {
     return axios.post(`${apiUrl()}/admin/suggestCardEdit`, card);
+  },
+  suggestCardDeletion: (id: number) => {
+    console.log(`id`, id)
+    return axios.post(`${apiUrl()}/admin/suggestCardDeletion`, {id});
   },
   createUser: (user: { username: string; password: string }) => {
     return axios.post(`${apiUrl()}/user`, user);

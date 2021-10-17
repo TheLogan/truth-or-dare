@@ -18,7 +18,7 @@ import { formatCardText } from "../../../utils/utils";
 
 const CardBrowser: React.FC = (props) => {
   const { adminCards, login } = useAppState();
-  const { loadAdminCards, saveCardSuggestion } = useActions().admin;
+  const { loadAdminCards, saveCardSuggestion, suggestCardDeletion } = useActions().admin;
   const [selectedCard, setSelectedCard] = useState<null | eAdminCard>(null);
   const [formatDescr, setFormatDescr] = useState(false);
 
@@ -31,6 +31,13 @@ const CardBrowser: React.FC = (props) => {
     saveCardSuggestion(changedCard);
     setSelectedCard(null);
   };
+
+  const handleDelete = () => {
+    if(!selectedCard) return;
+    const id = selectedCard.id;
+    suggestCardDeletion(id);
+    setSelectedCard(null);
+  }
 
   const truthCards: eAdminCard[] = adminCards.filter(
     (card) => card.category === "truth"
@@ -118,6 +125,7 @@ const CardBrowser: React.FC = (props) => {
           selectedCard={selectedCard}
           onClose={() => setSelectedCard(null)}
           onSave={handleSave}
+          onDelete={handleDelete}
         />
       )}
     </>
