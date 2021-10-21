@@ -1,4 +1,4 @@
-import eCard, { eAdminCard } from "../Entities/eCard"
+import eCard, { eAdminCard, eCardEdit } from "../Entities/eCard"
 
 type State = {
   loadedCards: eCard[];
@@ -11,7 +11,7 @@ type State = {
   endLevel: number | null;
   currentCard: null | eCard;
   login: {token?: string, role?: 'ADMIN' | 'USER', error?: string}
-  cardEdits: []
+  cardEdits: eCardEdit[]
 }
 
 export const state: State = {
