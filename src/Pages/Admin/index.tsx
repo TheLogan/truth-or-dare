@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import { Switch, Route, useRouteMatch, useHistory } from "react-router-dom";
 import Layout from "../../Components/Layout";
+import PrivateRoute from "../../Components/PrivateRoute";
 import { useAppState } from "../../Overmind";
 import AdminLogin from "./AdminLogin";
 import CardBrowser from "./CardBrowser";
@@ -60,15 +61,15 @@ const Admin: React.FC = (props) => {
           <Route path={`${url}/login`}>
             <AdminLogin />
           </Route>
-          <Route path={`${url}/browse`}>
+          <PrivateRoute path={`${url}/browse`}>
             <CardBrowser />
-          </Route>
-          <Route path={`${url}/createUser`}>
+          </PrivateRoute>
+          <PrivateRoute path={`${url}/createUser`}>
             <CreateUser />
-          </Route>
-          <Route path={`${url}/reviewEdits`}>
+          </PrivateRoute>
+          <PrivateRoute path={`${url}/reviewEdits`}>
             <EditBrowser />
-          </Route>
+          </PrivateRoute>
         </Switch>
       </Layout>
     </>

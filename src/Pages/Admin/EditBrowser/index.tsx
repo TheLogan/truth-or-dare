@@ -1,46 +1,55 @@
 import { CheckBox, CheckBoxOutlineBlank } from "@mui/icons-material";
-import { TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableBody } from "@mui/material";
+import {
+  TableContainer,
+  Paper,
+  Table,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableBody,
+} from "@mui/material";
 import React, { useEffect } from "react";
+import EditReviewModal from "../../../Components/EditReviewModal";
 import { eCardEdit } from "../../../Entities/eCard";
 import { useActions, useAppState } from "../../../Overmind";
 
 const EditBrowser = () => {
   const { getCardEdits } = useActions().admin;
   const { cardEdits } = useAppState();
+
+  const [selectedEdit, setSelectedEdit] = React.useState<undefined | eCardEdit>(
+    undefined
+  );
+
   useEffect(() => {
     getCardEdits();
   }, []);
 
-  useEffect(() => {
-    console.log(`cardEdits`, cardEdits);
-  }, [cardEdits])
+  useEffect(() => {}, [cardEdits]);
 
-  const truthEdits = cardEdits.filter(edit => edit.category === "truth");
-  const dareEdits = cardEdits.filter(edit => edit.category === "dare");
-  const specialEdits = cardEdits.filter(edit => edit.category === "special");
+  const truthEdits = cardEdits.filter((edit) => edit.category === "truth");
+  const dareEdits = cardEdits.filter((edit) => edit.category === "dare");
+  const specialEdits = cardEdits.filter((edit) => edit.category === "special");
 
-  return(
+  return (
     <>
-      {renderDataTable(truthEdits, "truth")}
-      {renderDataTable(dareEdits, "dare")}
-      {renderDataTable(specialEdits, "special")}
+      {renderDataTable(truthEdits, "truth", setSelectedEdit)}
+      {renderDataTable(dareEdits, "dare", setSelectedEdit)}
+      {renderDataTable(specialEdits, "special", setSelectedEdit)}
+      {
+        selectedEdit && 
+        <EditReviewModal selectedEdit={selectedEdit} onClose={()=> setSelectedEdit(undefined)} />
+      }
     </>
-  )
-
-  // return <div>
-  //   {cardEdits.map(card => {
-  //     card.
-  //     render
-  //     return <></>
-  //   })}
-  // </div>;
+  );
 };
 
 export default EditBrowser;
 
 const renderDataTable = (
-  cards: eCardEdit[],
-  variant: "truth" | "dare" | "special"
+  edits: eCardEdit[],
+  variant: "truth" | "dare" | "special",
+  setSelectedEdit: (edit: eCardEdit) => void
 ) => {
   return (
     <TableContainer component={Paper}>
@@ -56,30 +65,30 @@ const renderDataTable = (
           </TableRow>
         </TableHead>
         <TableBody>
-          {cards.map((card) => (
+          {edits.map((edit) => (
             <TableRow
-              // onClick={() => setSelectedCard(card)}
-              key={card.id}
+              onClick={() => setSelectedEdit(edit)}
+              key={edit.id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               className={`tableRow ${variant}`}
             >
               <TableCell component="th" scope="row">
-                {card.id}
+                {edit.id}
               </TableCell>
               <TableCell align="right">
                 {
-                // formatDescr
+                  // formatDescr
                   // ? formatCardText(card.description)
-                  // : 
-                  card.description
-                  }
+                  // :
+                  edit.description
+                }
               </TableCell>
-              <TableCell align="right">{card.level}</TableCell>
+              <TableCell align="right">{edit.level}</TableCell>
               <TableCell align="right">
-                {card.isBottle ? <CheckBox /> : <CheckBoxOutlineBlank />}
+                {edit.isBottle ? <CheckBox /> : <CheckBoxOutlineBlank />}
               </TableCell>
-                <TableCell align="right">{card.verified}</TableCell>
-              <TableCell align="right">{card.cardCount}</TableCell>
+              <TableCell align="right">{edit.verified}</TableCell>
+              <TableCell align="right">{edit.cardCount}</TableCell>
             </TableRow>
           ))}
         </TableBody>
