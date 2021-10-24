@@ -9,7 +9,7 @@ import {
   oneOrTwoPieces,
   wordEnding,
 } from "./randomizers";
-import 'react-app-polyfill/stable'
+const replaceAll = require("string.prototype.replaceall");
 
 export const capitalizeFirstLetter = (str: string) => {
   return str.charAt(0).toUpperCase() + str.slice(1);
@@ -55,7 +55,7 @@ export const formatCardText = (description: string) => {
       );
     }
   }
-
+  replaceAll.shim();
 
   descr = descr.replaceAll("*12pieces*", oneOrTwoPieces());
   descr = descr.replaceAll("*direction*", getDirection());
