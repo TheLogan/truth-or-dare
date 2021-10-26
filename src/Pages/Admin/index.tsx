@@ -55,7 +55,7 @@ const Admin: React.FC = (props) => {
       <Layout>
         <Switch>
           <Route exact path={url}>
-            <h3 id="adminMenuH3">Admin Menu</h3>
+            <h3>Admin Menu</h3>
             {renderMenu()}
           </Route>
           <Route path={`${url}/login`}>

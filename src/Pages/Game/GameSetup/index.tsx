@@ -110,7 +110,7 @@ const GameSetup = () => {
 
   return (
     <>
-      <h1 id="setup-title">Settings</h1>
+      <h1>Settings</h1>
       <Well variant="dark">
         {/* <Well variant="light"> */}
         <div className="setup-container">

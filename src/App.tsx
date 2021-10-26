@@ -6,8 +6,9 @@ import 'typeface-roboto'
 import { useActions } from './Overmind';
 import Admin from './Pages/Admin';
 import Game from './Pages/Game';
-import { Button, Link } from '@mui/material';
+import { Button } from '@mui/material';
 import { Android } from '@mui/icons-material';
+import './baseStyle.scss';
 
 function App() {
   const actions = useActions();
@@ -22,7 +23,6 @@ function App() {
           <Route path="/admin/">
             <Admin />
           </Route>
-
           <Route path="/game"> 
             <Game />
           </Route>
