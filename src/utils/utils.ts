@@ -18,7 +18,8 @@ export const capitalizeFirstLetter = (str: string) => {
 export const randomRange = (min: number = 0, max: number = 10) =>
   Math.floor(Math.random() * (max - min + 1) + min);
 
-export const shuffleCards = (cards: eCard[]) => {
+export const initialShuffle = (cards: eCard[]) => {
+  console.log('discarded cards length', cards.length);
   const cardArr: eCard[] = [];
   cards.forEach((card) => {
     for (let i = 0; i < card.cardCount; i++) {
@@ -26,11 +27,19 @@ export const shuffleCards = (cards: eCard[]) => {
     }
   });
 
+  const shuffledDeck: eCard[] = shuffleCards(cardArr);
+  return shuffledDeck;
+};
+
+export const shuffleCards = (cards: eCard[]) => {
+  console.log('discarded cards length', cards.length);
+
   const shuffledDeck: eCard[] = [];
-  while (cardArr.length > 0) {
-    const index = Math.floor(Math.random() * cardArr.length);
-    shuffledDeck.push(...cardArr.splice(index, 1));
+  while (cards.length > 0) {
+    const index = Math.floor(Math.random() * cards.length);
+    shuffledDeck.push(...cards.splice(index, 1));
   }
+  console.log('shuffled length', shuffledDeck.length);
   return shuffledDeck;
 };
 

@@ -1,6 +1,6 @@
 import { Context } from '..'
 import eCard from '../../Entities/eCard';
-import { shuffleCards } from '../../utils/utils';
+import { initialShuffle, shuffleCards } from '../../utils/utils';
 
 export const getCards = async (context: Context) => {
   const cards = (await context.effects.api.getCards()).data;
@@ -10,7 +10,7 @@ export const getCards = async (context: Context) => {
 
 export const shuffleDeck = (context: Context, cards: eCard[]) => {
 
-  context.state.cardDeck = shuffleCards(cards);
+  context.state.cardDeck = initialShuffle(cards);
 }
 
 export const setStartLevel = (context: Context, val: number) => {
@@ -57,8 +57,8 @@ export const nextCard = (context: Context, val: "truth" | "dare") => {
     if(selectedIndex < 0) {
       discard.push(...deck);
       deck = shuffleCards(discard);
+      discard = [];
       console.log('shuffling');
-      
     }
     attempts++;
   }
