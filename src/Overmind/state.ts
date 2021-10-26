@@ -7,8 +7,8 @@ type State = {
   discardPile: eCard[];
   timeBetweenLevels: number | '',
   startTime: number,
-  startLevel: number | null;
-  endLevel: number | null;
+  startLevel: number;
+  endLevel: number;
   currentCard: null | eCard;
   login: {token?: string, role?: 'ADMIN' | 'USER', error?: string}
   cardEdits: eCardEdit[];
@@ -22,8 +22,8 @@ export const state: State = {
   discardPile: [],
   timeBetweenLevels: '',
   startTime: 0,
-  startLevel: null,
-  endLevel: null,
+  startLevel: 0,
+  endLevel: 0,
   currentCard: null,
   login: {},
   cardEdits: [],

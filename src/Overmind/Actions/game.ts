@@ -1,6 +1,6 @@
 import { Context } from '..'
 import eCard from '../../Entities/eCard';
-import { initialShuffle, shuffleCards } from '../../utils/utils';
+import { getCurrentLevel, initialShuffle, shuffleCards } from '../../utils/utils';
 
 export const getCards = async (context: Context) => {
   const cards = (await context.effects.api.getCards()).data;
@@ -43,10 +43,7 @@ export const nextCard = (context: Context, val: "truth" | "dare") => {
   let discard = context.state.discardPile.map(x => { return { ...x } });
   let cardsSinceLastSpecial = context.state.cardsSinceLastSpecial;
 
-  const levelTime = Number(context.state.timeBetweenLevels) * 1000; //FIXME: Current level is way off!!!
-  const timeDiff = new Date().getTime() - context.state.startTime;
-  const levels = levelTime / timeDiff;
-  const currentLevel = Math.floor(levels) + Number(context.state.startLevel);
+  const currentLevel = getCurrentLevel(context.state.startTime, context.state.startLevel, context.state.endLevel, context.state.timeBetweenLevels || 3)
 
   const findIndex = () => deck.findIndex(x => (x.category === val || (x.category === 'special' && cardsSinceLastSpecial > 4)) && x.level <= currentLevel);
 
@@ -64,10 +61,6 @@ export const nextCard = (context: Context, val: "truth" | "dare") => {
   }
   if(selectedIndex < 0) throw new Error('card index is less than 0');
 
-  console.log('selected', deck[selectedIndex]);
-  console.log('level', currentLevel);
-  
-
   const discarded = deck.splice(0, selectedIndex);
   selected = deck.splice(0, 1)[0];
   discard.push(...discarded);
@@ -78,16 +71,6 @@ export const nextCard = (context: Context, val: "truth" | "dare") => {
   context.state.cardDeck = deck;
   context.state.currentCard = selected;
   context.state.discardPile = discard;
-  console.log(`deck`, deck);
-  console.log(`discard`, discard);
-
-
-  // if(context.state.cardDeck.length < 1) {
-  //   // Do the shuffle;
-  // }
-
-  // const cardIndex = context.state.cardDeck.findIndex(x => x.category === 'special' || x.category === val);
-  // context.state.currentCard = context.state.cardDeck.splice(cardIndex, 1)[0];
 }
 
 export const discardSelected = (context: Context) => {
