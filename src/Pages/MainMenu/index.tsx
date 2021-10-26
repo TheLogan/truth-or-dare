@@ -7,9 +7,9 @@ const MainMenu = () => {
   return <>
     <h1>Main Menu</h1>
 
-    <Button onClick={() => history.push('/game')}>Play web version</Button>
-    <Button onClick={() => history.push('/download')}>Download App</Button>
-    <Button onClick={() => history.push('/admin')}>Admin</Button>
+    <Button variant="contained" onClick={() => history.push('/game')}>Play web version</Button>
+    <Button variant="contained" onClick={() => history.push('/download')}>Download App</Button>
+    <Button variant="contained" onClick={() => history.push('/admin')}>Admin</Button>
   </>
 }
 

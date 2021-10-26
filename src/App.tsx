@@ -23,7 +23,7 @@ function App() {
             <Admin />
           </Route>
 
-          <Route path="/game">
+          <Route path="/game"> 
             <Game />
           </Route>
           <Route path="/download">
@@ -33,9 +33,6 @@ function App() {
                 <Android style={{paddingRight: '10px'}} />
                 Android
               </Button>
-              {/* <Link variant="button" href="">
-              </Link> */}
-               {/* <a href=>Android download</a> */}
             </Layout>
           </Route>
 
