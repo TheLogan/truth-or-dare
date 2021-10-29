@@ -1,6 +1,6 @@
 import axios from "axios";
 import { Context } from "..";
-import eCard from "../../Entities/eCard";
+import eCard, { eCardEdit } from "../../Entities/eCard";
 
 export const loadAdminCards = async (context: Context) => {
   const cards = (await context.effects.api.getAdminCards()).data;
@@ -63,3 +63,12 @@ export const createUser = async (
     console.log(error);
   }
 };
+
+export const acceptEdit = async (context: Context, edit: eCardEdit) => {
+  return (await context.effects.api.acceptEdit(edit)).data;
+}
+
+
+export const rejectEdit = async (context: Context, edit: eCardEdit) => {
+  return (await context.effects.api.rejectEdit(edit)).data;
+}

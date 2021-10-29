@@ -39,8 +39,8 @@ const EditReviewModal: React.FC<iEditModal> = (props) => {
           style={{ margin: "16px 0px" }}
         />
         <Grid container direction="row" justifyContent="space-between">
-          <Button variant="contained">Discard</Button>
-          <Button variant="contained">Accept</Button>
+          <Button variant="contained" onClick={props.onReject}>Reject</Button>
+          <Button variant="contained" onClick={props.onAccept}>Accept</Button>
         </Grid>
       </div>
     </Modal>

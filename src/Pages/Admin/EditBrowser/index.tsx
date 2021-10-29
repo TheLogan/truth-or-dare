@@ -14,7 +14,7 @@ import { eCardEdit } from "../../../Entities/eCard";
 import { useActions, useAppState } from "../../../Overmind";
 
 const EditBrowser = () => {
-  const { getCardEdits } = useActions().admin;
+  const { getCardEdits, acceptEdit, rejectEdit } = useActions().admin;
   const { cardEdits } = useAppState();
 
   const [selectedEdit, setSelectedEdit] = React.useState<undefined | eCardEdit>(
@@ -25,7 +25,16 @@ const EditBrowser = () => {
     getCardEdits();
   }, []);
 
-  useEffect(() => {}, [cardEdits]);
+  const handleReject = () => {
+    if (!selectedEdit) return;
+    rejectEdit(selectedEdit);
+  }
+  const handleAccept = () => {
+    if (!selectedEdit) return;
+    acceptEdit(selectedEdit);
+  }
+
+  useEffect(() => { }, [cardEdits]);
 
   const truthEdits = cardEdits.filter((edit) => edit.category === "truth");
   const dareEdits = cardEdits.filter((edit) => edit.category === "dare");
@@ -37,8 +46,13 @@ const EditBrowser = () => {
       {renderDataTable(dareEdits, "dare", setSelectedEdit)}
       {renderDataTable(specialEdits, "special", setSelectedEdit)}
       {
-        selectedEdit && 
-        <EditReviewModal selectedEdit={selectedEdit} onClose={()=> setSelectedEdit(undefined)} />
+        selectedEdit &&
+        <EditReviewModal
+          selectedEdit={selectedEdit}
+          onClose={() => setSelectedEdit(undefined)}
+          onReject={handleReject}
+          onAccept={handleAccept}
+        />
       }
     </>
   );

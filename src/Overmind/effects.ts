@@ -1,5 +1,5 @@
 import axios from "axios";
-import eCard from "../Entities/eCard";
+import eCard, { eCardEdit } from "../Entities/eCard";
 
 const baseUrl = "https://api-ijnhh.ondigitalocean.app/api";
 const baseLocal = "http://localhost:8080";
@@ -33,9 +33,16 @@ export const api = {
   },
   suggestCardDeletion: (id: number) => {
     console.log(`id`, id)
-    return axios.post(`${apiUrl()}/admin/suggestCardDeletion`, {id});
+    return axios.post(`${apiUrl()}/admin/suggestCardDeletion`, { id });
   },
   createUser: (user: { username: string; password: string }) => {
     return axios.post(`${apiUrl()}/user`, user);
   },
+
+  acceptEdit: (edit: eCardEdit) => { 
+    return axios.post(`${apiUrl()}/admin/acceptEdit`, edit);
+  },
+  rejectEdit: (edit: eCardEdit) => { 
+    return axios.post(`${apiUrl()}/admin/rejectEdit`, edit);
+  }
 };
