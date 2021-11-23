@@ -16,6 +16,7 @@ function App() {
   React.useEffect(() => { actions.game.getCards(); }, []);
 
 
+  //Routing on individual pages/subroutes
   return (
     <Router basename={window.location.hostname.includes('localhost') ? '' : '/game'}>
       <div>
