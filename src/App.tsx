@@ -36,7 +36,6 @@ function App() {
               </Button>
             </Layout>
           </Route>
-
           <Route path="/">
             <Layout>
               <MainMenu />
