@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { iEditModal } from "./interfaces";
 
+//Component to review edits suggested
 const EditReviewModal: React.FC<iEditModal> = (props) => {
   if (!props.selectedEdit) return <></>;
   const { category, description, isBottle, cardCount } = props.selectedEdit;
