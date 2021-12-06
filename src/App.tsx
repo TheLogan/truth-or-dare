@@ -18,7 +18,7 @@ function App() {
 
   //Routing on individual pages/subroutes
   return (
-    <Router basename={window.location.hostname.includes('localhost') ? '' : '/game'}>
+    <Router>
       <div>
         <Switch>
           <Route path="/admin/">
