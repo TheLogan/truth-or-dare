@@ -1,7 +1,7 @@
 import axios from "axios";
 import eCard, { eCardEdit } from "../Entities/eCard";
 
-const baseUrl = "https://api-ijnhh.ondigitalocean.app/api";
+const baseUrl = "https://logans-truth-or-dare-server.herokuapp.com"
 const baseLocal = "http://localhost:8080";
 
 const apiUrl = () => {
