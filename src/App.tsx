@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, HashRouter, Switch, Route } from "react-router-dom";
 import Layout from './Components/Layout';
 import MainMenu from './Pages/MainMenu';
 import 'typeface-roboto'
@@ -18,7 +18,7 @@ function App() {
 
   //Routing on individual pages/subroutes
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <div>
         <Switch>
           <Route path="/admin/">
@@ -43,7 +43,7 @@ function App() {
           </Route>
         </Switch>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
