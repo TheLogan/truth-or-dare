@@ -18,7 +18,7 @@ function App() {
 
   //Routing on individual pages/subroutes
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div>
         <Switch>
           <Route path="/admin/">
