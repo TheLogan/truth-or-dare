@@ -1,7 +1,7 @@
 import { Button, Grid } from "@mui/material";
 import React from "react";
 import GameCard from "../../../Components/GameCard";
-import { cardState } from "../../../Components/GameCard/interfaces";
+import { eCardState } from "../../../Components/GameCard/interfaces";
 import { useActions, useAppState } from "../../../Overmind";
 import { capitalizeFirstLetter } from "../../../utils/utils";
 import "./style.scss";
@@ -10,7 +10,7 @@ const Play = () => {
   const { currentCard } = useAppState();
   const { discardSelected, nextCard } = useActions().game;
 
-  const [cardState, setCardState] = React.useState<cardState>("unTouched");
+  const [cardState, setCardState] = React.useState<eCardState>(eCardState.unTouched);
 
   const cardExit = () => {
     discardSelected();
@@ -32,8 +32,8 @@ const Play = () => {
 
   const gameState = () => {
     if (currentCard === null) return "Truth or Dare";
-    if (cardState === "bottleNotSpun") return "Click bottle";
-    if (cardState === "done") return "Swipe card";
+    if (cardState === eCardState.bottleNotSpun) return "Click bottle";
+    if (cardState === eCardState.done) return "Swipe card";
     return "...";
   };
 

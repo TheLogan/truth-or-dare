@@ -5,8 +5,8 @@ export interface iCard {
   draggable?: boolean;
   onClick?: (card: eCard) => void;
   cardExit?: () => void;
-  cardState?: cardState;
-  onCardStateChange?: (state: cardState) => void;
+  cardState?: eCardState;
+  onCardStateChange?: (state: eCardState) => void;
 }
 
-export type cardState = 'unTouched' | 'bottleNotSpun' | 'bottleSpinning' | 'done';
+export enum eCardState {unTouched, bottleNotSpun, bottleSpinning, done};

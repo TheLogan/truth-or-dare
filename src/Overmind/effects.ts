@@ -5,7 +5,7 @@ const baseUrl = "https://logans-truth-or-dare-server.herokuapp.com"
 const baseLocal = "http://localhost:8080";
 
 const apiUrl = () => {
-  return document.location.hostname.includes("localhost") ? baseLocal : baseUrl;
+  return process.env.DB_ENV === "Local" ? baseLocal : baseUrl;
 };
 
 export const api = {

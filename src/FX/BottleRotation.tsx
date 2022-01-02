@@ -1,21 +1,25 @@
 import { CSSProperties, useEffect } from "react";
+import { eCardState } from "../Components/GameCard/interfaces";
 import { iBottleRotation } from "./interfaces";
 
 const BottleRotation: React.FC<iBottleRotation> = (props) => {
+
   useEffect(() => {
-    if (props.rotate === true) {
-      setTimeout(() => {
-        props.onDone();
-      }, props.timing + 1000);
-    }
+    if (props.cardState !== eCardState.bottleSpinning) return;
+    console.log("Starting the rotation");
+    console.log("rotPoint", props.rotationPoint);
+    setTimeout(() => {
+      props.onDone();
+      console.log("The rotation has stopped");
+    }, props.rotationPoint.ms);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [props.rotate]);
+  }, [props.cardState]);
 
   const style: CSSProperties = {
     display: "inline-block",
     backfaceVisibility: "hidden",
-    transform: props.rotate ? `rotate(${props.rotation}deg)` : `rotate(0deg)`,
-    transition: `transform ${props.timing}ms`,
+    transform: props.cardState < 2 ? `rotate(0deg)` : `rotate(${props.rotationPoint.deg}deg)`,
+    transition: `transform ${props.rotationPoint.ms}ms`,
     width: "100%",
   };
 
